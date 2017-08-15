@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[Hishop.Weixin.Pay.csproj]
+SCC_Aux_Path = http://192.168.1.250/VaultService|:31
+SCC_Project_Name = $/CWWSC_NEW/Hishop.Weixin.Pay

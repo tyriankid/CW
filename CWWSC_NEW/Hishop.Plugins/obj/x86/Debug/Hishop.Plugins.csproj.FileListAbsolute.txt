@@ -1,0 +1,5 @@
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.Plugins\bin\Debug\Hishop.Plugins.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.Plugins\bin\Debug\Hishop.Plugins.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.Plugins\obj\x86\Debug\Hishop.Plugins.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.Plugins\obj\x86\Debug\Hishop.Plugins.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.Plugins\obj\x86\Debug\Hishop.Plugins.pdb

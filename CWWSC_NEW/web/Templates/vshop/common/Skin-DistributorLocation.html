@@ -1,0 +1,190 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {background: #ffffff;}
+    .btn-danger {padding: 0.8rem 0;}
+    #setaddress {background:#3293FE}
+    table {border: 1px solid #c3c3c3;}
+    table tr {border: 1px solid #c3c3c3;}
+     table td:nth-of-type(1){width:22%;}
+     table td:nth-of-type(2){width:78%;}
+    table td {border: 1px solid #c3c3c3;padding: 1rem 0;}
+    .btnBox #chooseaddress {width: 50%;float: right;border-radius: 0;}
+    .btnBox #canceladdress {background:rgba(215,215,215,0.72);margin-top: 0;float: left;width: 50%;border-radius: 0;}
+</style>
+<div id="showAddress">
+    <div class="pbox distributor well">
+        <table style="width:100%;font-size: 1.4rem;">
+            <tr>
+                <td style="text-align:center">位置名称</td>
+                <td id="tdWzName"><asp:Literal ID="litWzName" runat="server" text="国家级武汉新材料科技企业孵化器"></asp:Literal></td>
+            </tr>
+            <tr>
+                <td style="text-align:center">位置详细</td>
+                <td id="tdWzInfo"><asp:Literal ID="litWzInfo" runat="server" text="湖北省武汉市硚口区古田五路17"></asp:Literal></td>
+            </tr>
+            <tr>
+                <td style="text-align:center">城市</td>
+                <td id="tdWzCity"><asp:Literal ID="litWzCity" runat="server" text="武汉市"></asp:Literal></td>
+            </tr>
+             <tr>
+                <td style="text-align:center">经度</td>
+                <td id="tdLat"><asp:Literal ID="litLat" runat="server" text="30.59069"></asp:Literal></td>
+            </tr>
+            <tr>
+                <td style="text-align:center">纬度</td>
+                <td id="tdLng"><asp:Literal ID="litLng" runat="server" text="114.21985"></asp:Literal></td>
+            </tr>
+        </table>
+        <input type="hidden" name="backimg" id="hidmodule" value="locationPicker" runat="server" />
+        <!--<input type="hidden" name="hdlogo" id="hdlogo" runat="server" />-->
+    </div>
+    <div class="nextstep pbox">
+        <a type="button" class="btn btn-danger btn-block" id="setaddress" onclick="chooseLocation()">选择位置</a>
+        <a type="button" class="btn btn-danger btn-block" id="saveaddress" onclick="bindLocation()">绑定位置</a>
+    </div>
+</div>
+
+<div id="chooseAddress" class="divchoose" style="display:none">
+    <div class="btnBox">
+        <a type="button" class="btn btn-danger btn-block" id="chooseaddress" onclick="OkAddress()">确认位置</a>
+        <a type="button" class="btn btn-danger btn-block" id="canceladdress" onclick="CancelAddress()">取消选择</a>
+    </div>
+    <iframe id="mapPage" width="100%" height="100%" frameborder=0 
+        src="http://apis.map.qq.com/tools/locpicker?search=1&type=1&key=O5KBZ-HUQ3P-3SCDS-VKIQG-J2AFQ-LEBVV&referer=myapp">
+    </iframe>
+</div>
+
+<style type="text/css">
+html,body {
+    height:100%;
+   overflow:hidden;
+}
+
+.divchoose {
+    height:100%;
+   overflow:hidden;
+}
+*{margin:0;padding:0}
+
+#footer{
+    clear:left;    /* 防止float:left对footer的影响 */
+    width:180px;
+    height:80px;
+position:fixed;
+bottom:0;
+right:0;
+    background:#FFE4B5;
+}
+</style>
+
+<script>
+    //选择位置
+    function chooseLocation() {
+        //window.location.href = "SetLocation.aspx";
+        $("#showAddress").hide(500);
+        $("#chooseAddress").show(500);
+
+        //清空已选
+        //module = null;
+        //lat = null;
+        //lng = null;
+        //poiaddress = null;
+        //poiname = null;
+        //cityname = null;
+    }
+
+    //绑定位置
+    function bindLocation() {
+        var module = $("#VDistributorLocation_hidmodule").val();
+        var lat = $("#tdLat").html();
+        var lng = $("#tdLng").html();
+        var poiaddress = $("#tdWzInfo").html();
+        var poiname = $("#tdWzName").html();
+        var cityname = $("#tdWzCity").html();
+
+        if (lat == null || lat == "" || lng == null || lng == "") {
+            alert_h("请先选择位置，再绑定！");
+            return;
+        }
+        var data = {};
+        data.module = module;
+        data.lat = lat;
+        data.lng = lng;
+        data.poiaddress = poiaddress;
+        data.poiname = poiname;
+        data.cityname = cityname;
+        
+        //弹出选择提示框
+        myConfirm('询问', '确认要绑定地址【' + poiname + '】吗？', '确定绑定', function () {
+            BindStoreLocation(data);
+        });
+    }
+
+    //Post提交到数据库
+    function BindStoreLocation(data) {
+        $.post("/api/VshopProcess.ashx?action=BindStoreLocation", data, function (json) {
+            if (json.Result == "OK") {
+                alert_h("绑定成功！", function () {
+                    //location.reload();
+                });
+            }
+            else {
+                alert_h(json.Msg);
+            }
+        });
+    }
+
+    $(function () {
+        
+    });
+
+
+    //选择的位置相关变量
+    var module;
+    var lat;
+    var lng;
+    var poiaddress;
+    var poiname;
+    var cityname;
+
+
+    //保存设置的地址
+    function OkAddress() {
+        if (module == null || lat == null || lng == null) {
+            alert("请在地图下方列表中选择位置！");
+        }
+        else {
+            $("#showAddress").show(500);
+            $("#chooseAddress").hide(500);
+            //设置新选择的值
+            $("#VDistributorLocation_hidmodule").val(module);
+            $("#tdLat").html(lat);
+            $("#tdLng").html(lng);
+            $("#tdWzInfo").html(poiaddress);
+            $("#tdWzName").html(poiname);
+            $("#tdWzCity").html(cityname);
+        }
+    }
+
+    //取消选择
+    function CancelAddress() {
+        $("#showAddress").show(500);
+        $("#chooseAddress").hide(500);
+    }
+
+    window.addEventListener('message', function (event) {
+        // 接收位置信息，用户选择确认位置点后选点组件会触发该事件，回传用户的位置信息
+        var loc = event.data;
+        if (loc && loc.module == 'locationPicker') {//防止其他应用也会向该页面post信息，需判断module是否为'locationPicker'
+            module = loc.module;
+            lat = loc.latlng.lat;
+            lng = loc.latlng.lng;
+            poiaddress = loc.poiaddress;
+            poiname = loc.poiname;
+            cityname = loc.cityname;
+        }
+    }, false);
+
+
+</script>
+<hi:common_footer runat="server" />

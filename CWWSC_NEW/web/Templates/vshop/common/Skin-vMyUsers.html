@@ -1,0 +1,158 @@
+﻿<hi:common_header runat="server" />
+<link href="../style/search.css" rel="stylesheet" />
+<style>
+    .goods-box .name{font-size:1.6rem;}
+    .goods-box .price{font-size:1.4rem;}
+    @media screen and (max-width: 320px) {
+   .goods-box .name{height:24px;}
+    }
+    
+    .goods-box .shu{position:relative;left:80%;top:-85px;font-size:1.6rem;width:80px;}
+</style>
+<div class="list-rank clearfix sort" style="position:fixed; top:0; left:0; right:0; margin:0 auto; z-index:99; max-width:650px;">
+    <a name="default" href="#">
+        <div>
+            默认</div>
+    </a>
+    <a name="jinri" href="#">
+        <div>
+            今日<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span></div>
+    </a>
+    <a name="benyue" href="#">
+        <div>
+            本月<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span></div>
+    </a>
+    <a name="jidu" href="#">
+        <div>
+            季度<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span></div>
+    </a>
+    <a name="niandu" href="#">
+        <div>
+            年度<span class="glyphicon glyphicon-arrow-up"></span><span class="glyphicon glyphicon-arrow-down"></span></div>
+    </a>
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="search_soso" >
+        <div class="sort-action show">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </a>
+</div>
+<div  style="position:fixed; top:43px; left:0; right:0; margin:0 auto; z-index:100; max-width:650px;">
+<div class="panel panel-default list-sort-panel" style="margin-bottom: 0; border-radius: 0;
+    position: relative; z-index:100;">
+    <div id="collapseOne" class="panel-collapse collapse">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="jt">
+            ◆</span></a>
+        <div class="panel-body">
+            <hi:vshoptemplatedrepeater id="rptCategories" templatefile="/Tags/skin-Common_VProductListCategory.ascx"  runat="server" />
+            <div class="clearfix" style="border-bottom: 1px dashed #CCD1D9;">
+            </div>
+            <div class="goods-list-bar">
+                <div class="input-group form-search">
+                    <input type="text" class="form-control search-query" id="txtKeywords">
+                    <span class="input-group-btn">
+                        <button type="submit" onclick="searchs()" class="btn btn-warning btn-sm" data-type="last">
+                            搜索</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+<p class="text-center list-empty hide" id="empty">
+    <span class="glyphicon glyphicon-bell"></span>
+           <em>会员为空</em>
+</p>
+
+<div class="pbox" id="productListContainer" style="margin-top:40px;">
+<div class="ask-box">
+    <div id="consulationsList">
+        <hi:vshoptemplatedrepeater id="rptUsers" templatefile="/Tags/skin-Common_MyUsers.ascx" runat="server" />
+    </div>
+    <div id="pager">
+    </div>
+</div>
+</div>
+<input type="hidden" clientidmode="Static" value="" runat="server" id="txtTotal" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentUserId" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentDomain" />
+
+<script src="/Utility/common.js" type="text/javascript"></script>
+<script src="/Utility/pager.js" type="text/javascript"></script>
+<script src="../script/dpt.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    
+    $(function () {
+        if (!$.trim($('#consulationsList').html())) {
+            $('.pbox').hide();
+            $('#empty').removeClass('hide');
+        }
+
+        //var answerDetails = $('.answerDetail');
+        //$.each(answerDetails, function (i, answerDetail) {
+        //    if (!$.trim($(answerDetail).html()))
+        //        $(answerDetail).parent().hide();
+        //});
+
+        var list_h = (document.documentElement.clientHeight - 49 - $('.list-empty').height()) * .5 + 'px';
+        $('.list-empty').css('margin-top', list_h);
+
+        //判断排序并且显示对应的样式
+        var sort = getParam('sort');
+        var order = getParam('order');
+        if (sort && order) {
+            var selectedLink = $('.sort a[name="' + sort + '"]');
+            if (order == 'desc')
+                selectedLink.find('div').addClass('down');
+            else
+                selectedLink.find('div').addClass('up');
+        }
+
+
+        //得到排序查询链接集合
+        var sortLink = $('.sort a[href="#"]');
+        var isdate = getParam('isdate');
+        var keyWords = getParam('keyWord');
+        if (keyWords)
+            $("#txtKeywords").val(keyWords);
+
+        $.each(sortLink, function (i, link) {
+            link = $(link);
+            //url = '/vshop/productList.aspx?categoryId=' + categoryId + '&keyWord=' + escape(keyWords);
+            url = '/vshop/MyUsers.aspx?keyWord=' + escape(keyWords) + "&isdate=" + isdate;
+            if (i > 0) {//第一个为默认面，不设置排序
+                url += '&sort=' + link.attr('name');
+                if (link.find('div.up').length > 0)
+                    url += '&order=desc';
+                else
+                    url += '&order=asc';
+            }
+            link.attr('href', url);
+        });
+
+        vshopPager('pager', $('#txtTotal').val(), 1, 10);
+    });
+
+    function searchs() {
+        var key = $("#txtKeywords").val();
+        var url = "/Vshop/MyUsers.aspx?keyWord=" + escape(key);
+        
+        window.location.href = url;
+    }
+                                                                             
+    function startChat(memberid) {
+        var locationstr = $("#currentDomain").val() + ":3000/userchat.html?k=";
+        var attrstr = getChatAttrs($("#currentUserId").val(), memberid);
+        location.href = locationstr+ escape(attrstr);
+    }
+
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+
+</script>

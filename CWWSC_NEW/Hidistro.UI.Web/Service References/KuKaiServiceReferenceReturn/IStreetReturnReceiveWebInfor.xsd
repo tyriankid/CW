@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="http://service.pub.streetorder.so.bs.nc/IStreetReturnReceiveWebInfor" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://service.pub.streetorder.so.bs.nc/IStreetReturnReceiveWebInfor" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <documentation source="eip_version">65</documentation>
+  </annotation>
+  <complexType name="sendReturnOrderToNCResponse">
+    <sequence>
+      <element name="returnArg" type="string">
+        <annotation>
+          <documentation source="source.description">null</documentation>
+          <documentation source="source.displayName">returnArg</documentation>
+          <documentation source="source.fullClassName">null</documentation>
+          <documentation source="source.AnnotateeName">null</documentation>
+          <documentation source="source.LENGTH" />
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="sendReturnOrderToNCResponse" type="tns:sendReturnOrderToNCResponse" />
+  <complexType name="sendReturnOrderToNC">
+    <sequence>
+      <element name="vo" type="string">
+        <annotation>
+          <documentation source="source.description">null</documentation>
+          <documentation source="source.displayName">vo</documentation>
+          <documentation source="source.fullClassName">null</documentation>
+          <documentation source="source.AnnotateeName">null</documentation>
+          <documentation source="source.LENGTH" />
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="sendReturnOrderToNC" type="tns:sendReturnOrderToNC" />
+</schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns0="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo" name="ICatchStreetOrderWebInfo" targetNamespace="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation source="eip_version">65</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:include schemaLocation="http://beta.esb.coocaa.com:8053/esoc/streetorder?xsd=../../../../../../nc/bs/so/streetorder/pub/service/ICatchStreetOrderWebInfo.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendStreetOrderToNC">
+    <wsdl:part name="parameter" element="ns0:sendStreetOrderToNC" />
+  </wsdl:message>
+  <wsdl:message name="sendStreetOrderToNCResponse">
+    <wsdl:part name="parameter" element="ns0:sendStreetOrderToNCResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICatchStreetOrderWebInfo">
+    <wsdl:documentation>
+      <annotation name="description">
+      </annotation>
+      <annotation name="version">1.0.0</annotation>
+      <annotation name="level">Platform</annotation>
+      <annotation name="deprecated">false</annotation>
+    </wsdl:documentation>
+    <wsdl:operation name="sendStreetOrderToNC">
+      <wsdl:documentation>
+        <annotation name="name">sendStreetOrderToNC</annotation>
+        <annotation name="description">
+        </annotation>
+        <annotation name="joinTransaction">false</annotation>
+        <annotation name="oneway">
+        </annotation>
+        <annotation name="deprecated">false</annotation>
+      </wsdl:documentation>
+      <wsdl:input message="ns0:sendStreetOrderToNC" />
+      <wsdl:output message="ns0:sendStreetOrderToNCResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ICatchStreetOrderWebInfoSOAP11Binding" type="ns0:ICatchStreetOrderWebInfo">
+    <soap:binding wsdl:required="true" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendStreetOrderToNC">
+      <soap:operation soapAction="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo/sendStreetOrderToNC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ICatchStreetOrderWebInfo">
+    <wsdl:port name="ICatchStreetOrderWebInfoSOAP11port_http" binding="ns0:ICatchStreetOrderWebInfoSOAP11Binding">
+      <soap:address wsdl:required="true" location="http://beta.esb.coocaa.com:8053/esoc/streetorder" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

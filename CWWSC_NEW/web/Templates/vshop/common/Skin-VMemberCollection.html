@@ -1,0 +1,131 @@
+﻿<hi:common_header runat="server" />
+<style>
+    .search_div_member {
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 9999;
+        overflow: hidden;
+        background: #ffffff;
+        width: 100%;
+        height:3.4rem;
+    }
+    .searchMember {
+        margin-left:2%;
+        height: 2.6rem;
+        float: left;
+        margin-top: 0.4rem;
+            width: 78%;
+            border: 1px solid #c3c3c3;
+            margin-right: 2%;
+    }
+    .searchBtnMember {
+        width:16%;
+        height: 2.6rem;
+        margin-top: 0.4rem;
+        float: left;
+        background:#3293FE;
+        color: #ffffff;
+        border: none;
+        outline: none;
+    }
+    .well {
+        margin-top: 3rem;
+        background-color: #efefef;
+    }
+
+        .well li {
+            margin-bottom: 1rem;
+            background: #ffffff;
+        }
+    .goods-box .name {
+        height: 24px;
+    }
+    .goods-box .price {
+        font-size:1.4rem;
+        padding-top: 0;
+        overflow:hidden; 
+text-overflow:ellipsis;
+display:-webkit-box; 
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2; 
+margin-top:10px;
+    }
+</style>
+<div class="search_div_member">
+    <input class="searchMember" id="txtKeywords" type="text" placeholder="会员搜索：请输入会员名称">
+    <button type="submit" class="searchBtnMember" onclick="search()">搜索</button>
+</div>
+<ul class="well goods-box" role="menu" aria-labelledby="dropdownMenu1" id="ulallmember">
+    <li id="divDisLoading" class="loading"><b></b></li>
+</ul>
+
+<input id="pagenum" value="" type="hidden" />
+<script type="text/javascript">
+    function search() {
+        getdata(true, $("#txtKeywords").val());
+    }
+    $(function () {
+        search()
+    })
+    //获取用户列表
+    var nextPage = 1;
+    function getdata(isMemberList,keyword) {
+        if (isMemberList) {
+            $("#pagenum").val(0);
+            nextPage = 1;
+            $("#ulallmember").html("");
+        }
+        //防止重复加载验证
+        if (parseInt($("#pagenum").val()) >= nextPage) { return; }
+        $.ajax({
+            url: "/api/StoreHandler.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "getStoreMember", type: GetQueryString("type"), keyword: keyword, pagenum: nextPage },
+            type: 'get', dataType: 'json', timeout: 10000,
+            success: function (e) {
+                if (e.Result == "OK") {
+                    console.log(e.Data)
+                    if (e.Count <= 0) {
+                        $("#divDisLoading").text("暂无数据");
+                        return;
+                    }
+                    $("#pagenum").val(nextPage);//当前页
+                    nextPage = e.NextPage;
+                    var Datalist = "";
+                    for (var i = 0; i < e.Data.length; i++) {
+                        var userHead = "/utility/pics/none.gif";
+                        if (e.Data[i].UserHead != null) {
+                            userHead = e.Data[i].UserHead;
+                        }
+                        Datalist += '<li><a href="#"><img id="vMyUsers_rptUsers_ctl00_ctl00_ListImage1" src="' + userHead + '" style="border-width: 0px; border-width: 0px;"><div class="info"><div class="name font-l bcolor">' + e.Data[i].UserName + '</div><div class="price text-danger">电话：' + e.Data[0].CellPhone + '</div><div class="price text-danger">地址：' + e.Data[i].Address + '</div></div> </a></li>'
+                        if (nextPage == 0) {
+                            $("#divDisLoading").text("加载完成");
+                        }
+
+                    }
+                    $("#ulallmember").append(Datalist);
+                }
+                else { alert_h(json.Msg); }
+            }
+        })
+    }
+  
+    //自动加载
+    $(window).scroll(function () {
+        //alert("当前页码："+ nextPage);
+        if ($(window).scrollTop() == $(document).height() - $(window).height() && nextPage > 1) {
+            getdata(false);
+        }
+    });
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+

@@ -1,0 +1,286 @@
+﻿<hi:common_header runat="server" />
+
+<div class="pbox well">
+    <h2 class="add-addr-tt">编辑增值税发票信息</h2>
+    <!--<div class="well add-addrbox">-->
+        <input id="CompanyName" type="text" runat="server" class="form-control" maxlength="50"  placeholder="请填写公司名称">
+        <input id="TaxesCode" type="text" runat="server" class="form-control bmargin" maxlength="50"  placeholder="请填写纳税识别号">
+        <input id="Bank" type="text" runat="server" class="form-control bmargin" maxlength="50"  placeholder="请填写公司开户行">
+        <input id="BankNumber" type="text" runat="server" class="form-control bmargin" maxlength="50"  placeholder="请填写开户行账号">
+        <input id="Phone" type="text" runat="server" class="form-control bmargin" maxlength="50"  placeholder="请填写公司电话">
+        <textarea id="Address" runat="server" class="form-control bmargin" rows="3" maxlength="200"  placeholder="请填写公司地址"></textarea>
+        <div class="storeLogo">
+            <p>税务登记证</p>
+            <form id="ImageForm1" method="post" enctype="multipart/form-data">
+                <div class="upFile clearfix">
+                    <div class="bgImg"><img id="img1" runat="server" src="http://fpoimg.com/100x100/product" /></div>  <div class="adds"><input type="file" id="exampleInputFile1" name="img1"></div>
+                    <p class="font-s text-muted">点击左边的图片修改</p>
+                </div>
+            </form>
+        </div>
+        <div class="storeLogo">
+            <p>专票授权委托书</p>
+            <form id="ImageForm2" method="post" enctype="multipart/form-data">
+                <div class="upFile clearfix">
+                    <div class="bgImg"><img id="img2" runat="server" src="http://fpoimg.com/100x100/product" /></div>  <div class="adds"><input type="file" id="exampleInputFile2" name="img2"></div>
+                    <p class="font-s text-muted">点击左边的图片修改</p>
+                </div>
+            </form>
+        </div>
+        <div class="storeLogo">
+            <p>一般纳税人证明</p>
+            <form id="ImageForm3" method="post" enctype="multipart/form-data">
+                <div class="upFile clearfix">
+                    <div class="bgImg"><img id="img3" runat="server" src="http://fpoimg.com/100x100/product" /></div>  <div class="adds"><input type="file" id="exampleInputFile3" name="img3"></div>
+                    <p class="font-s text-muted">点击左边的图片修改</p>
+                </div>
+            </form>
+        </div>
+        <input type="hidden" name="hdimg1" id="hdimg1" runat="server" />
+        <input type="hidden" name="hdimg2" id="hdimg2" runat="server" />
+        <input type="hidden" name="hdimg3" id="hdimg3" runat="server" />
+        <input type="hidden" name="ReceiptId" id="ReceiptId" runat="server" clientidmode="Static" />
+
+        <div class="btn-dangerbox">
+            <button type="button" id="savemes" onclick="AddReceipt()" class="btn btn-danger btn-block bmargin">保存增值税发票信息</button>
+        </div>
+    <!--</div>-->
+</div>
+<script type="text/javascript">
+
+    $(function () {
+        $("#exampleInputFile1").uploadPreview({ Img: "vEditReceipt_img1", Width: 100, Height: 100 });
+        $("#exampleInputFile2").uploadPreview({ Img: "vEditReceipt_img2", Width: 100, Height: 100 });
+        $("#exampleInputFile3").uploadPreview({ Img: "vEditReceipt_img3", Width: 100, Height: 100 });
+    });
+
+    function AddReceipt() {
+        var isValite = true;
+        if ($("#vEditReceipt_CompanyName").val() == "") {
+            $("#vEditReceipt_CompanyName").focus();
+            alert_h($("#vEditReceipt_CompanyName").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("#vEditReceipt_TaxesCode").val() == "") {
+            $("#vEditReceipt_TaxesCode").focus();
+            alert_h($("#vEditReceipt_TaxesCode").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("#vEditReceipt_Bank").val() == "") {
+            $("#vEditReceipt_Bank").focus();
+            alert_h($("#vEditReceipt_Bank").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("#vEditReceipt_BankNumber").val() == "") {
+            $("#vEditReceipt_BankNumber").focus();
+            alert_h($("#vEditReceipt_BankNumber").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("#vEditReceipt_Phone").val() == "") {
+            $("#vEditReceipt_Phone").focus();
+            alert_h($("#vEditReceipt_Phone").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("#vEditReceipt_Address").val() == "") {
+            $("#vEditReceipt_Address").focus();
+            alert_h($("#vEditReceipt_Address").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        btnstate(0);
+        //验证图片
+        upLoadFile1();
+    }
+
+    //设置按钮状态
+    function btnstate(obj) {
+        if (obj == 0) {
+            $("#savemes").text("正在保存...");
+            $("#savemes").attr({ "disabled": "disabled" });
+            maskayer(0);
+
+        }
+        else {
+            $("#savemes").text("保存增值税发票信息");
+            $("#savemes").removeAttr("disabled");
+            maskayer(1);
+        }
+    }
+
+    function upLoadFile1() {
+        var options = {
+            type: "POST",
+            url: '/API/Files.ashx?action=FpUpload',
+            success: showResponse1
+        };
+        // 将options传给ajaxForm
+        $('#ImageForm1').ajaxSubmit(options);
+    }
+
+    function upLoadFile2() {
+        var options = {
+            type: "POST",
+            url: '/API/Files.ashx?action=FpUpload',
+            success: showResponse2
+        };
+        // 将options传给ajaxForm
+        $('#ImageForm2').ajaxSubmit(options);
+    }
+
+    function upLoadFile3() {
+        var options = {
+            type: "POST",
+            url: '/API/Files.ashx?action=FpUpload',
+            success: showResponse3
+        };
+        // 将options传给ajaxForm
+        $('#ImageForm3').ajaxSubmit(options);
+    }
+
+    var fpImage1;
+    function showResponse1(data) {
+        fpImage1 = "";
+        if (data == "0") {
+            alert_h("授权委托书上传图片失败!");
+            btnstate(1);
+            return;
+        } else {
+            if (data == "1") {
+                alert_h("授权委托书图片不能大于4M!请重新上传！!");
+                btnstate(1);
+                return;
+            } else {
+                if (data == "2") {
+                    alert_h("授权委托书图片格式不正确！上传格式有(.gif、.jpg、.png、.bmp)!");
+                    btnstate(1);
+                    return;
+                } else {
+                    if (data == "3")
+                        fpImage1 = $("#vEditReceipt_hdimg1").val();
+                    else {
+                        fpImage1 = data;
+                    }
+                }
+            }
+        }
+        upLoadFile2();
+    }
+
+    var fpImage2;
+    function showResponse2(data) {
+        fpImage2 = "";
+        if (data == "0") {
+            alert_h("授权委托书上传图片失败!");
+            btnstate(1);
+            return;
+        } else {
+            if (data == "1") {
+                alert_h("授权委托书图片不能大于4M!请重新上传！!");
+                btnstate(1);
+                return;
+            } else {
+                if (data == "2") {
+                    alert_h("授权委托书图片格式不正确！上传格式有(.gif、.jpg、.png、.bmp)!");
+                    btnstate(1);
+                    return;
+                } else {
+                    if (data == "3")
+                        fpImage2 = $("#vEditReceipt_hdimg2").val();
+                    else {
+                        fpImage2 = data;
+                    }
+                }
+            }
+        }
+        upLoadFile3();
+    }
+
+    function showResponse3(data) {
+        if (data == "0") {
+            alert_h("授权委托书上传图片失败!");
+            btnstate(1);
+            return;
+        } else {
+            if (data == "1") {
+                alert_h("授权委托书图片不能大于4M!请重新上传！!");
+                btnstate(1);
+                return;
+            } else {
+                if (data == "2") {
+                    alert_h("授权委托书图片格式不正确！上传格式有(.gif、.jpg、.png、.bmp)!");
+                    btnstate(1);
+                    return;
+                } else {
+                    if (data == "3")
+                        data = $("#vEditReceipt_hdimg3").val();
+                }
+            }
+        }
+
+        if (fpImage1 == null || fpImage1 == "") {
+            alert_h("请上传税务登记证图片！");
+            btnstate(1);
+            return;
+        }
+        if (fpImage2 == null || fpImage2 == "") {
+            alert_h("请上传授权委托书图片！");
+            btnstate(1);
+            return;
+        }
+        if (data == null || data == "") {
+            alert_h("请上传纳税人证明图片！");
+            btnstate(1);
+            return;
+        }
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post',
+            dataType: 'json',
+            timeout: 10000,
+            data: {
+                action: "EditReceipt",
+                companyName: $("#vEditReceipt_CompanyName").val(),
+                taxesCode: $("#vEditReceipt_TaxesCode").val(),
+                bank: $("#vEditReceipt_Bank").val(),
+                bankNumber: $("#vEditReceipt_BankNumber").val(),
+                Phone: $("#vEditReceipt_Phone").val(),
+                Address: $("#vEditReceipt_Address").val(),
+                registrationImg: fpImage1,
+                empowerEntrustImg: fpImage2,
+                taxpayerProveImg: data,
+                receiptId: $("#ReceiptId").val()
+            },
+            success: function (resultData) {
+                if (resultData.success) {
+                    if (window.location.search.indexOf("returnUrl=") == -1) {
+                        location.href = "/Vshop/Receeipt.aspx";
+                        return false;
+                    }
+                    var returnURL = window.location.search.substr(window.location.search.indexOf("returnUrl=") + 10);
+                    if (returnURL == undefined) {
+                        location.href = "/Vshop/Receeipt.aspx";
+                        return false;
+                    }
+                    location.href = decodeURIComponent(returnURL);
+                }
+                else {
+                    alert_h("添加失败");
+                    btnstate(0);
+                }
+            }
+        });
+    }
+
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<hi:common_footer runat="server" />

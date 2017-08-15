@@ -1,0 +1,31 @@
+﻿/*flexible width*/
+
+body {
+    background:#FFF;
+}
+
+.description{
+    width:100%;
+}
+.description h1{
+    font-size:2rem;
+    text-align:center;
+    margin-bottom: 30px;
+}
+.description h1 span {
+    padding: .5rem 1.5rem;
+    /*background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 60, 0, 1)), to(rgba(255, 204, 160, 1)));*/
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#337ab7), to(#ccd1d9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display:inline-block;
+    border-bottom:2px solid #337ab7;
+    }
+.InpBox{ padding:0 20px; margin:5px 0; font-size:1.6rem; }
+.InpBox dt{float:left;width: 30%;text-align:right;padding-right:5%;line-height:40px;font-family:Cambria;white-space:nowrap;text-overflow:ellipsis;color: #000;}
+.InpBox dd{float:left;width: 70%;}
+.InpBox dd .text{ padding:.5rem 5%; border:0; border-bottom:1px solid #CCC; width:90%;}
+.InpBox dd select{ padding:.5rem 5%; border:0; border-bottom:1px solid #CCC; width:90%;}
+
+.submitBox{ text-align:center; }
+.btn-submit{ display:inline-block; width:60%; text-align:center; background:#3bafda; color:#FFF; height:4rem; line-height:4rem; font-size:1.8rem; border:0; margin-bottom:1rem; border-radius:.5rem; margin-top:1rem; }

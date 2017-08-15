@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://jlinterface.jlserver" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://jlinterface.jlserver" targetNamespace="http://jlinterface.jlserver" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="MPFTOJL_FPResponse">
+    <wsdl:part name="MPFTOJL_FPReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_THRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_CJRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_QSRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_SPXXResponse">
+    <wsdl:part name="MPFTOJL_SPXXReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_FHRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Sql2JsonResponse">
+    <wsdl:part name="Sql2JsonReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_CJResponse">
+    <wsdl:part name="MPFTOJL_DHD_CJReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_FPRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Sql2JsonRequest">
+    <wsdl:part name="sInputSql" type="xsd:string" />
+    <wsdl:part name="sparameterMC" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_FHResponse">
+    <wsdl:part name="MPFTOJL_DHD_FHReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_QSResponse">
+    <wsdl:part name="MPFTOJL_DHD_QSReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_SPXXRequest">
+    <wsdl:part name="JSONXML" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="MPFTOJL_DHD_THResponse">
+    <wsdl:part name="MPFTOJL_DHD_THReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="MPFTOJL">
+    <wsdl:operation name="Sql2Json" parameterOrder="sInputSql sparameterMC">
+      <wsdl:input name="Sql2JsonRequest" message="impl:Sql2JsonRequest" />
+      <wsdl:output name="Sql2JsonResponse" message="impl:Sql2JsonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_SPXX" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_SPXXRequest" message="impl:MPFTOJL_SPXXRequest" />
+      <wsdl:output name="MPFTOJL_SPXXResponse" message="impl:MPFTOJL_SPXXResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_CJ" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_DHD_CJRequest" message="impl:MPFTOJL_DHD_CJRequest" />
+      <wsdl:output name="MPFTOJL_DHD_CJResponse" message="impl:MPFTOJL_DHD_CJResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_FH" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_DHD_FHRequest" message="impl:MPFTOJL_DHD_FHRequest" />
+      <wsdl:output name="MPFTOJL_DHD_FHResponse" message="impl:MPFTOJL_DHD_FHResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_QS" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_DHD_QSRequest" message="impl:MPFTOJL_DHD_QSRequest" />
+      <wsdl:output name="MPFTOJL_DHD_QSResponse" message="impl:MPFTOJL_DHD_QSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_TH" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_DHD_THRequest" message="impl:MPFTOJL_DHD_THRequest" />
+      <wsdl:output name="MPFTOJL_DHD_THResponse" message="impl:MPFTOJL_DHD_THResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_FP" parameterOrder="JSONXML">
+      <wsdl:input name="MPFTOJL_FPRequest" message="impl:MPFTOJL_FPRequest" />
+      <wsdl:output name="MPFTOJL_FPResponse" message="impl:MPFTOJL_FPResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MPFTOJLSoapBinding" type="impl:MPFTOJL">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="Sql2Json">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="Sql2JsonRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="Sql2JsonResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_SPXX">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_SPXXRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_SPXXResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_CJ">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_DHD_CJRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_DHD_CJResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_FH">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_DHD_FHRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_DHD_FHResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_QS">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_DHD_QSRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_DHD_QSResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_DHD_TH">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_DHD_THRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_DHD_THResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MPFTOJL_FP">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="MPFTOJL_FPRequest">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="MPFTOJL_FPResponse">
+        <wsdlsoap:body use="encoded" namespace="http://jlinterface.jlserver" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MPFTOJLService">
+    <wsdl:port name="MPFTOJL" binding="impl:MPFTOJLSoapBinding">
+      <wsdlsoap:address location="http://183.62.206.240:8088/jlwebserver/services/MPFTOJL" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

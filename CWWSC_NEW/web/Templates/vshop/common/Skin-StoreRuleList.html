@@ -1,0 +1,97 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {
+        background: #ffffff;
+    }
+    .yongjin-box {
+        overflow: hidden;
+        margin-bottom: 48px;
+        padding:0;
+    }
+    .table-nr-left tr th {
+        text-align: center;
+    }
+    .table-nr-left tr td {
+        text-align: left;
+    }
+    .new-addBtn {
+        background: #37A9FF;
+        padding: 0.8rem 1.6rem;
+        border-color: none;
+        position: fixed;
+        bottom: 48px;
+        width: 100%;
+        display: inline-block;
+        color: #ffffff;
+        font-size: 1.6rem;
+        text-align: center;
+        border: 2px solid #C0BFBF;
+    }
+    .del {
+        padding: 0.7rem 0.7rem;
+        font-size: 1.2rem;
+        border-radius: 3px;
+    }
+    .doc {
+        padding:0.7rem 0.7rem;
+        font-size: 1.2rem;
+        border-radius: 3px;
+    }
+    .docEdit {
+         margin: 0 0 0 0.8rem;
+    }
+</style>
+<div class="yongjin-box">
+    <table class="table-nr-left">
+        <thead>
+<!--            <tr>
+                <th style="width:20%;">店员姓名</th>
+                <th style="width:36%;">电话</th>
+                <th style="width:24%;">类型</th>
+                <th style="width:20%;">是否认证</th>-->
+<!--                <th>操作</th>-->
+<!--            </tr>-->
+            <tr><th colspan="3" style="width: 100%;border-bottom:10px solid #E5E5E5;"></th></tr>
+        </thead>
+        <hi:vshoptemplatedrepeater id="StoreRuleRepeater" templatefile="/Tags/skin-StoreRuleRepeater.ascx" runat="server" />
+    </table>
+    <script type="text/javascript">
+        $(".doc").click(function () {
+            var DsId = $(this).attr("DsId");
+            $(".iframeBox").show(1000).find("iframe").attr("src", "StoreRuleOperat.aspx?DsId=" + DsId);
+        });
+        function addStoreMember() {
+            $(".iframeBox").show(1000).find("iframe").attr("src", "StoreRuleOperat.aspx");
+        }
+        $(".del").click(function () {
+            myConfirm('询问', '确认删除该会员吗？', '确定删除', function () {
+                var DsID = $(this).attr("DsID");
+                $.ajax({
+                    url: "/api/StoreHandler.ashx",
+                    type: 'post', dataType: 'json', timeout: 10000,
+                    data: { action: "StoreRule", DsID: DsID, StoreRuleType: "del" },
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.success) {
+                            alert_h(data.msg, function () {
+                                window.location.reload();
+                            });
+                            return;
+                        }
+                        else {
+                            alert_h(data.msg);
+                            return;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+<div class="iframeBox" style="width: 100%; height: 100%; overflow: hidden; position: fixed; top: 0; left: 0; bottom: 0; right: 0; margin: auto; z-index: 99999; display: none;">
+    <div style="width: 100%; height: 100%;">
+        <iframe style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+</div>
+<a class="new-addBtn" onclick="addStoreMember()">新增</a>
+<hi:common_footer runat="server" />

@@ -1,0 +1,176 @@
+﻿
+<!DOCTYPE>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>满意度星级评价</title>
+<script type="text/javascript" src="../script/StarReview/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../script/StarReview/js/comment.js?v=1"></script>
+
+</head>
+<body>
+    
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+.quiz{position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: solid 1px #ccc;
+    height: 20rem;
+    width: 90%;
+    background: #ffffff;}
+.quiz h3{font-size:14px;line-height:35px;height:35px;border-bottom:solid 1px #e8e8e8;padding-left:20px;background:#f8f8f8;color:#666;position:relative;margin-bottom: 2rem;}
+.quiz_content{padding-top:10px;padding-left:20px;position:relative;height:167px;}
+.quiz_content li.full-comment{position:relative;z-index:99;height:41px;}
+.quiz_content li.cate_l{height:24px;line-height:24px;padding-bottom:10px;}
+.quiz_content li.cate_l dl dt{float:left;}
+.quiz_content li.cate_l dl dd{float:left;padding-right:15px;}
+.quiz_content li.cate_l dl dd label{cursor:pointer;}
+.goods-comm{height:41px;position:relative;z-index:7;}
+.goods-comm-stars{line-height:25px;height:41px;position:absolute;top:0px;left:0;width:400px;}
+.goods-comm-stars .star_l{float:left;display:inline-block;margin-right:5px;display:inline;}
+.goods-comm-stars .star_choose{float:left;display:inline-block;}
+.rater-star{position:relative;list-style:none;margin:0;padding:0;background-repeat:repeat-x;background-position:left top;float:left;}
+.rater-star-item, .rater-star-item-current, .rater-star-item-hover{position:absolute;top:0;left:0;background-repeat:repeat-x;}
+.rater-star-item{background-position: -100% -100%;}
+.rater-star-item-hover{background-position:0 -48px;cursor:pointer;}
+.rater-star-item-current{background-position:0 -48px;cursor:pointer;}
+.rater-star-item-current.rater-star-happy{background-position:0 -25px;}
+.rater-star-item-hover.rater-star-happy{background-position:0 -25px;}
+.rater-star-item-current.rater-star-full{background-position:0 -72px;}
+/* popinfo */
+.popinfo{display:none;position:absolute;top:30px;background:url(../images/comment/infobox-bg.gif) no-repeat;padding-top:8px;width:192px;margin-left:-14px;}
+.popinfo .info-box{border:1px solid #f00;border-top:0;padding:0 5px;color:#F60;background:#FFF;}
+.popinfo .info-box div{color:#333;}
+.rater-click-tips{font:12px/25px;color:#333;margin-left:10px;background:url(../images/comment/infobox-bg-l.gif) no-repeat 0 0;width:125px;height:34px;padding-left:16px;overflow:hidden;}
+.rater-click-tips span{display:block;background:#FFF9DD url(../images/comment/infobox-bg-l-r.gif) no-repeat 100% 0;height:34px;line-height:34px;padding-right:5px;}
+.rater-star-item-tips{background:url(../images/comment/star-tips.gif) no-repeat 0 0;height:41px;overflow:hidden;}
+.cur.rater-star-item-tips{display:block;}	
+.rater-star-result{color:#FF6600;font-weight:bold;padding-left:10px;float:left;}
+    .orderBtnBox {
+        text-align:center;
+        margin-top:1rem;
+    }
+    .commentBtn {
+        padding: 0.6rem 1.4rem;
+        background: #3293FE;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        color: #ffffff;
+        margin-left: 0.8rem;margin-right:0.6rem;
+        display:inline-block;
+    }
+    .closeBtn {
+        padding: 0.6rem 1.4rem;
+        background: #b3b3b3;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        color: #ffffff;
+        display:inline-block; 
+    }
+    @media screen and (min-width: 330px) and (max-width:400px) {
+        .goods-comm-stars {
+            padding-left: 2rem;
+        }
+
+        .commentBtn {
+            left: 40%;
+        }
+    }
+     @media screen and (min-width: 401px) {
+        .goods-comm-stars{padding-left:3rem;}
+        .commentBtn {left: 42%;}
+}
+</style>
+<br>
+   <input  type="hidden" id="StarNum"/>
+<div class="quiz">
+	<h3>我要评论</h3>
+	<div class="quiz_content">
+		<form action="" id="" method="post">
+			<div class="goods-comm">
+				<div class="goods-comm-stars">
+					<span class="star_l">产品质量：</span>
+					<div id="rate-comm-1" class="rate-comm" ></div>
+				</div>
+			</div>
+            <div class="goods-comm">
+				<div class="goods-comm-stars">
+					<span class="star_l">产品外观：</span>
+					<div id="rate-comm-2" class="rate-comm"></div>
+				</div>
+			</div>
+            <div class="goods-comm">
+				<div class="goods-comm-stars">
+					<span class="star_l">服务态度：</span>
+					<div id="rate-comm-3" class="rate-comm"></div>
+				</div>
+			</div>
+            <div class="goods-comm">
+				<div class="goods-comm-stars">
+					<span class="star_l">物流速度：</span>
+					<div id="rate-comm-4" class="rate-comm"></div>
+				</div>
+			</div>
+           
+           
+		</form>
+	</div>
+     <div class="orderBtnBox">  
+        <input class="closeBtn"  value="取消" onclick="closeReview()" type="button"/><input class="commentBtn"  value="评论" onclick="Review()" type="button"/>
+     </div>
+</div>
+
+    <script>
+        var ratecomm1=0;
+        var ratecomm2=0;
+        var ratecomm3=0;
+        var ratecomm4=0;
+
+        $("#rate-comm-1").click(function () {
+            ratecomm1=$("#StarNum").val()
+        })
+        $("#rate-comm-2").click(function () {
+           ratecomm2 = $("#StarNum").val()
+        })
+        $("#rate-comm-3").click(function () {
+            ratecomm3 = $("#StarNum").val()
+        })
+        $("#rate-comm-4").click(function () {
+             ratecomm4 = $("#StarNum").val()
+        })
+        function Review() {
+            $.ajax({
+                url: "/api/StoreHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { action: "CommodityReview",review1:ratecomm1,review2:ratecomm2,review3:ratecomm3,review4:ratecomm4 },
+                dataType: "json",
+                success: function (data) {
+                    if (data.success) {
+                        alert(data.msg)
+                        window.setTimeout("location.href='MemberOrders.aspx'",1000)
+                        return;
+                    }
+                    else {
+                        alert(data.msg);
+                        return;
+                    }
+                },
+                error: function () {
+                    alert("404")
+                }
+            });
+        }
+        function closeReview() {
+            $(window.parent.document).find(".iframeBox").hide();//完成刷新  
+        }
+
+    </script>
+</body>
+</html>

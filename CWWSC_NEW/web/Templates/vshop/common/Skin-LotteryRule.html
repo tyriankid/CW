@@ -1,0 +1,115 @@
+﻿<hi:common_header runat="server" />
+
+<div class="dial">
+	<img class="dial1" src="../images/jf06.png" />
+	<img id="oTurntable" class="dial2" src="../images/jf08.png" />
+	<img id="oPointer" class="dial3" src="../images/jf07.png" />
+</div>
+<div class="myIntegral">我的积分：1998分</div>
+<div class="rule" onclick="Rule()">抽奖规则</div>
+<div class="list" onclick="List()">查看我的中奖记录</div>
+<div class="mask"></div>
+<div class="ruleBox">
+    <div class="til">抽奖规则</div>
+    <div class="con">抽奖规则抽奖规则抽奖规则抽奖规则抽奖规则抽奖规则抽奖规则抽奖规则</div>
+    <div class="btn1" onclick="CloseRule()">确定</div>
+</div>
+<hi:common_footer runat="server" />   
+
+<style>
+    html { height: 100%;width: 100%;}
+    body { background:url(../images/lottery.png) no-repeat;width: 100%;height:100%;background-size:100% 100%;position:relative;}
+    .dial{position:relative;width: 70%;margin: 0 auto 0 auto;top:25%;}
+    .dial1{width: 100%;}
+    .dial2{width:90%;position: absolute;top: 5%;left:5%;transition: all 4s;}
+    .dial3{position:absolute;width:40%;left:30%;top:25%;z-index: 999}
+    .myIntegral {bottom:28%;position: absolute;left: 50%;width: 100%;text-align: center;margin-left: -50%;color:#fff;font-size:1.6rem; }
+    .rule { bottom:20%;position: absolute;left: 50%;width: 8rem;text-align: center;margin-left: -4rem;color:#fff;font-size:1.6rem;}
+    .list {bottom:15%;position: absolute;left: 50%;width: 14rem;text-align: center;margin-left: -7rem;color:#d3a23e;font-size:1.2rem; }
+    .mask { position:fixed;top:0;left:0;width:100%;height:100%;z-index:998;background:rgba(0,0,0,0.3);display:none;}
+    .ruleBox { position:fixed;width:70%;height:24rem;margin:-12rem auto auto -35%;top:50%;left:50%;background:#fff;z-index:999;border-radius:0.3rem;display:none;}
+    .til {text-align:center;line-height:3rem;height:3rem;font-size:1.6rem; }
+    .con {padding:0 1rem;height:18rem;overflow:scroll; }
+    .btn1 { text-align:center;line-height:3rem;height:3rem;border-top:1px solid #f2f2f2;}
+</style>
+
+<script>
+    window.onload = function () {
+        //document.getElementsByTagName('body')[0].style.height = document.documentElement.clientHeight - 50 + 'px';
+    }
+
+    var oPointer = document.getElementById("oPointer");
+    var oTurntable = document.getElementById("oTurntable");
+    var cat = 51.4;
+    var num = 0;
+    var offOn = true;
+    document.title = "";
+
+    //触发抽奖事件
+    oPointer.onclick = function () {
+        if (offOn) {
+            oTurntable.style.transform = "rotate(0deg)"; //初始化为0°
+            offOn = !offOn;
+            lottery();
+        }
+    }
+        
+    //抽奖停止角度设置
+    function ratating(rdm) {
+        var timer = null;
+        clearInterval(timer);
+        timer = setInterval(function () {
+                oTurntable.style.transform = "rotate(" + rdm + "deg)";//设置停止角度
+                clearInterval(timer); //清空计时器
+                setTimeout(function () {
+                    offOn = !offOn;                      
+                }, 4000);
+            
+        }, 30);
+    }
+
+
+    //抽奖接口
+    function lottery() {
+        $.ajax({
+            url: "/API/StoreHandler.ashx",
+            type: 'post', dataType: 'json', timeout: 1000,
+            data: { action: "integrallottery" },
+            dataType: "json",
+            success: function (e) {
+                if (e.state) {
+                    ratating(e.place);
+                    setTimeout(function () {
+                        alert_h(e.lotteryitem, function () {
+                            window.location.reload();
+                        });
+                    }, 4500);
+                    
+                    return;
+                }
+                else {
+                    alert_h(e.msg);
+                    return;
+                }
+            }
+        });
+    }
+
+
+    //抽奖规则
+    function Rule() {
+        $('.mask').fadeIn();
+        $('.ruleBox').fadeIn();
+    }
+
+    //关闭抽奖记录
+    function CloseRule() {
+        $('.mask').fadeOut();
+        $('.ruleBox').fadeOut();
+    }
+
+    //查看中奖纪录
+    function List() {
+       
+    }
+</script>

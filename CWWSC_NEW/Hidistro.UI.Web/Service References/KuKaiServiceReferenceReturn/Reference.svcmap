@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="46ea2ea0-dbcc-4199-a3ac-9a3574184fb1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://beta.esb.coocaa.com:8053/esoc/streetreturnorder?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IStreetReturnReceiveWebInfor.xsd" MetadataType="Schema" ID="fa8ae01b-ff8e-48b5-b2d8-cc0a79d52423" SourceId="1" SourceUrl="http://beta.esb.coocaa.com:8053/esoc/streetreturnorder?xsd=../../../../../../nc/bs/so/streetorder/pub/service/IStreetReturnReceiveWebInfor.xsd" />
+    <MetadataFile FileName="IStreetReturnReceiveWebInfor.wsdl" MetadataType="Wsdl" ID="13230bdd-bb25-4b69-b0d0-d3f127b80ae4" SourceId="1" SourceUrl="http://beta.esb.coocaa.com:8053/esoc/streetreturnorder?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

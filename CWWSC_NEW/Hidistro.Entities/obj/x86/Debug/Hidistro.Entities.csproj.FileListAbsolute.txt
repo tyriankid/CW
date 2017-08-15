@@ -1,0 +1,15 @@
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Entities.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Entities.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Core.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Membership.Core.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hishop.Components.Validation.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\LitJson.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Core.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hishop.Components.Validation.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\obj\x86\Debug\Hidistro.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\obj\x86\Debug\Hidistro.Entities.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\obj\x86\Debug\Hidistro.Entities.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Entities\bin\Debug\Hidistro.Membership.Core.pdb

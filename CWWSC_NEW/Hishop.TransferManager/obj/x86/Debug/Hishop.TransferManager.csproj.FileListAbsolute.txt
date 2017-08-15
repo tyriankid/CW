@@ -1,0 +1,5 @@
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.TransferManager\obj\x86\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.TransferManager\obj\x86\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hishop.TransferManager\obj\x86\Debug\Hishop.TransferManager.csprojResolveAssemblyReference.cache

@@ -1,0 +1,489 @@
+﻿<!--<a id="aLinkToShipping" runat="server" />-->
+<!--   <input type="hidden" id="hiddenCartTotal" runat="server" />
+    </div>
+    <div class="ui_gap">
+        <a id="a1" class="mod_btn btn_strong btn_block">提交订单</a>
+    </div>
+-->
+<hi:common_header runat="server" />
+   	<!--<div class="shoppingStepBar clearfix">  
+            <div class="step active text-left"><em style="margin-left: -8px;">购物车</em><div class="glyphicon glyphicon-ok"></div><i style="border-bottom:2px solid #8cc152;"></i></div>                  
+            <div class="step active text-center"><em>确认订单</em><div class="glyphicon glyphicon-ok"></div></div>
+            <div class="step text-right"><em style="margin-right: -14px;">下单成功</em><div class="glyphicon glyphicon-ok"></div><i></i></div>            
+		</div>
+    <hr />-->
+<style>
+    .goods-list-p1 {padding:12px 10px;}
+    .goods-list-p li{margin-bottom:0.6rem;list-style:none;}
+    .btn-disable{
+        float: right;
+        width: 40%;
+        color: #FFF;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+        text-align: center;
+    }
+    .badge-h {
+        margin-bottom:0.6rem;
+    }
+    .look-address {
+        text-align: center;
+    }
+    #btnSheach{
+        background: #3293FE;
+        border: none;
+        outline: none;
+        border-radius:3px;
+        color:#ffffff;
+        height:24px;
+        line-height:24px;
+        padding:0 0.6rem;
+    }
+    @media screen  and (max-width:375px) and (min-width:340px) {
+        .goods-list-p .right {
+            padding-left: 67px;
+        }
+    }
+    @media screen and (min-width:376px) {
+        .goods-list-p .right {
+            padding-left: 84px;
+        }
+    }
+</style>
+    <div class="well well-addrbox clearfix">
+        <div class="btn-group rptAddress">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <asp:literal runat="server" id="litShipTo" />
+                <asp:literal runat="server" id="litCellPhone" />
+                <asp:literal runat="server" id="litAddress" />
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu " role="menu">
+                <hi:vshoptemplatedrepeater id="rptAddress" templatefile="/Tags/skin-Common_Addresses.ascx" runat="server" />
+                <li class="divider"></li>
+                <li><a  <asp:literal runat="server" id="litAddAddress" />>新增服务地址</a></li>
+            </ul>
+            <input type="hidden" runat="server" clientidmode="Static" id="selectShipTo" />
+        </div>
+
+        <!--发票信息-->
+        <div class="btn-group rptReceipt">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <asp:literal runat="server" id="litDefalutReceiptName" />
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu " role="menu">
+                <!--<li><a ReceiptId="0" briefReceipt="电子发票">电子发票</a></li>-->
+                <hi:vshoptemplatedrepeater id="rptReceipt" templatefile="/Tags/skin-Common_Receipt.ascx" runat="server" />
+                <li class="divider"></li>
+                <li><a  <asp:literal runat="server" id="litAddReceipt1" />>添加电子发票信息</a></li>
+                <li><a  <asp:literal runat="server" id="litAddReceipt2" />>添加增税发票信息</a></li>
+            </ul>
+            <!--<hi:Common_ReceiptTypeSelect runat="server" />-->
+            <input type="hidden" runat="server" clientidmode="Static" id="selectReceipt" />
+        </div>
+
+        <div class="btn-group selectShipToDate" style="display:none">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                时间不限<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" name="时间不限">时间不限</a></li>
+                <li><a href="#" name="周一至周五">周一至周五</a></li>
+                <li><a href="#" name="周六及公众假期">周六及公众假期</a></li>
+            </ul>
+            <input type="hidden" runat="server" clientidmode="Static" id="selectShipToDate" value="时间不限" />
+        </div>
+        <div class="btn-group selectShippingType">
+            <hi:common_shippingtypeselect id="dropShippingType" runat="server" />
+            <input type="hidden" runat="server" clientidmode="Static" id="selectShippingType" />
+        </div>
+
+        <div class="btn-group selectPaymentType">
+            <hi:common_paymenttypeselect runat="server" />
+            <input type="hidden" runat="server" clientidmode="Static" id="selectPaymentType" />
+        </div>
+
+
+        <div class="btn-group redpager">
+            <hi:common_userredpagerselect id="dropRedPager" cssclass="mod_select" runat="server" />
+            <input type="hidden" runat="server" clientidmode="Static" id="selectRedPager" />
+        </div>
+
+
+        <div class="btn-group coupon">
+            <hi:common_couponselect id="dropCoupon" cssclass="mod_select" runat="server" />
+            <input type="hidden" runat="server" clientidmode="Static" id="selectCoupon" />
+        </div>
+
+        <!--start 服务门店-->
+        <div class="panel panel-default" id="itemListDis"><!--style="display:none" -->
+            <div class="panel-heading order-shopcart">
+                <h3 class="panel-title">
+                   服务门店
+                </h3>
+            </div>
+            <div id="divstorelist" class="panel-body goods-list-p goods-list-p1">
+                <!--<a href="/Vshop/ProductDetails.aspx?productId=" + 11" class="detailLink">
+                    <div class="box">
+                        <div class="left">
+                        <Hi:ListImage runat="server" DataField="ThumbnailUrl60" />
+                        </div>
+                        <div class="right">
+                            <div class="bcolor name">
+                                门店名称</div>
+                            <div class="specification">
+                                <span class="badge-h">星级：</span>
+                                <span class="badge-h">城市：</span>
+                                <span class="badge-h">位置：</span>
+                                <span class="badge-h">详细地址：</span>
+                            </div>
+                            <div class="price text-danger">
+                                ¥100.00<span class="bcolor"> x
+                                    10</span></div>
+                        </div>
+                    </div>
+                </a>-->
+            </div>
+        </div>
+        <!--end 服务门店-->
+
+        <div class="panel panel-default" id="itemList"><!--style="display:none" -->
+            <div class="panel-heading order-shopcart">
+                <h3 class="panel-title">
+                   订单服务商品
+                </h3>
+                <a id="orderProductsChange" href="/vshop/shoppingCart.aspx">修改</a>
+            </div>
+            <div class="panel-body goods-list-p">
+                <hi:vshoptemplatedrepeater id="rptCartProducts" templatefile="/Tags/skin-Common_SubmmitCartProducts.ascx" runat="server" />
+            </div>
+        </div>
+        
+        <div class="panel panel-default" id="giftList"> <!--style="display:none" -->
+            <div class="panel-heading order-shopcart">
+                <h3 class="panel-title">
+                   兑换礼品
+                </h3>
+                <!--<a id="A1" href="/vshop/shoppingCart.aspx">修改</a>-->
+            </div>
+            <div class="panel-body goods-list-p">
+                <hi:vshoptemplatedrepeater id="rptCartGifts" templatefile="/Tags/skin-Common_SubmmitCartGifts.ascx" runat="server" />
+            </div>
+        </div>
+
+        <textarea id="remark" class="form-control" rows="3" placeholder="订单备注（选填）"></textarea>
+        <div class="last" style="float: right;">
+            <p class="">
+                商品金额：<span>¥<asp:literal runat="server" id="litProductTotalPrice" /></span>
+            </p>
+            <p class="">
+               <span> 优惠减免：</span><span>¥<asp:literal runat="server" id="litExemption" /></span>
+            </p>
+            <p class=" shippingTypes">
+                运费金额：<span>¥<label style="font-weight: normal; margin-bottom: 0;" id="shipcost">0.00</label></span>
+            </p>
+            <p class=" coupon">
+                优惠券抵扣：<span>
+                    ¥<label style="font-weight: normal; margin-bottom:0;" id="couponcost">0.00</label>
+                </span>
+            </p>
+            <p class=" redpager">
+                代金券抵扣：<span>
+                    ¥<label style="font-weight: normal; margin-bottom:0;" id="redpagercost">0.00</label>
+                </span>
+            </p>
+            <!--<p class="">
+                应付总额：<span><strong class="text-danger">¥</strong></span>
+            </p>-->
+            <p class="" id="needPoint">
+                需要积分：<span><strong class="text-danger"><label id="totalPoint" style="margin-bottom: 0;"><asp:literal runat="server" id="litTotalPoint" /></label></strong></span>
+            </p>
+           </div> 
+        
+    </div>
+
+    <div class="moneyFixbox clearfix">
+        <div class="moneyFix">
+            <div class="money">合计：￥<b><label id="total" style="margin-bottom: 0;"><asp:literal runat="server" id="litOrderTotal" /></label></b></div>
+        </div>
+        <button type="button" class="btn-danger" id="aSubmmitorder">提交订单</button>
+        
+    </div>
+<input type="hidden" id="productSource" runat="server" clientidmode="Static" /><!--商品来源（类型）-->
+<input type="hidden" id="productId" runat="server" clientidmode="Static" /><!--商品来源（类型）-->
+<input type="hidden" id="regionId" runat="server" clientidmode="Static" /><!--地址区域-->
+<input type="hidden" id="groupbuyHiddenBox" runat="server" clientidmode="Static" /><!--团购-->
+<input type="hidden" id="countdownHiddenBox" runat="server" clientidmode="Static" /><!--限时抢购-->
+<input type="hidden" id="cutdownHiddenBox" runat="server" clientidmode="Static" /><!--砍价-->
+<%<hi:weixinset id="weixin" runat="server"></hi:weixinset>%>
+<style>
+    .selected{background: #e6f2ff!important;}
+</style>
+<script>
+    /****start联动显示可服务门店列表***/
+    if ($('#selectShipTo').val() != null && $('#selectShipTo').val() != "" && $('#regionId').val() != null && $('#regionId').val() != "") {
+        getListDis($('#regionId').val());
+    }
+    /****end联动显示可服务门店列表***/
+
+
+    $('.rptAddress li a').click(function () {
+        $('.rptAddress button').html($(this).attr('briefAddress') + '<span class="caret"></span>');
+        var regionId = $(this).attr('name');
+        var shippingId = $(this).attr('shippingId');
+        $('#selectShipTo').val(shippingId);
+        refreshShippingTypes(regionId);
+
+        /*start联动显示可服务门店列表*/
+        if (regionId != null && regionId != "") {
+            getListDis(regionId);
+        }
+        /*end*/
+    });
+
+    //显示可提供服务的门店
+    function getListDis(regionid) {
+        var data = {};
+        data.ProductId = $("#productId").val();
+        data.Region = regionid;
+        //Post 传入商品及服务区域，返回可以提供服务的门店信息集合
+        $.post("/api/StoreHandler.ashx?action=serviceStoreList", data, function (json) {
+            if (json.Result == "OK") {
+                $("#divstorelist").empty()//情空HTML内容
+                //得到数据集， 无刷新加载绑定数据
+                if (json.Count <= 0) {
+                    $("#divstorelist").append("<div><span>您选中的地址无可提供服务的门店。</span></div>");
+                    $("#aSubmmitorder").attr("disabled", "true");//添加disabled属性
+                    $("#aSubmmitorder").removeClass();
+                    $("#aSubmmitorder").addClass("btn-disable");//设置样式
+                    return;
+                } else {
+                    $("#aSubmmitorder").removeAttr("disabled"); //移除disabled属性
+                    $("#aSubmmitorder").removeClass();
+                    $("#aSubmmitorder").addClass("btn-danger");//设置样式
+                }
+                for (var i = 0; i < json.Data.length; i++) {
+                    var logo = json.Data[i].Logo;
+                    if (logo == "") logo = "";//设置默认图片
+                    
+                    var html = '<li storeid="' + json.Data[i].UserId + '" poiname="' + json.Data[i].Location_poiname + '" poiaddress="' + json.Data[i].Location_poiaddress + '" >'
+                            + '<div class="box">'
+                            + '<div class="left"><img id="aa" class="bb" style="height:50px; width:50px" src="' + logo + '" /></div>'
+                            + '<div class="right">'
+                            + '<div class="bcolor name">' + json.Data[i].StoreName + '</div>'
+                            + '<div class="specification">'
+                                + '<span class="badge-h">星级：' + json.Data[i].LevelName + '</span><img id="aa" class="bb" style="height:32px; width:32px" src="' + json.Data[i].Ico + '" />'
+                                + '<span class="badge-h" style="margin-left:0.6rem;">城市：' + json.Data[i].Location_cityname + '</span>' 
+                            + '</div>'
+                            + '</div></div>'
+                            + '<div style="text-align: center;">'
+                             + '<span class="badge-h">位置：' + json.Data[i].Location_poiname + '</span>'
+                                + '<span class="badge-h">详细地址：' + json.Data[i].Location_poiaddress + '</span>'
+                                 + '<div class="look-address"><input type="button" class="btnSheachLook" id="btnSheach" value="查看位置" onclick="ShowLocation(' + json.Data[i].Location_lng + ',' + json.Data[i].Location_lat + ',' + json.Data[i].UserId + ')" /></div>'
+                            + '</div></li>'
+
+                    $("#divstorelist").append(html);
+                }
+                //绑定点击事件
+                $("#divstorelist li").click(function () {
+                    //$(this).find("span").toggle();
+                    if ($(this).hasClass("selected")) {
+                        $(this).removeClass("selected");
+                    } else {
+                        $(this).addClass("selected");
+                    }
+                    var liid = $(this).attr("storeid");
+                    $("#divstorelist li").each(function () {
+                        if (liid != $(this).attr("storeid")) {
+                            $(this).removeClass("selected");
+                        }
+                    });
+                    
+                });
+            }
+            else {
+                alert_h(json.Msg);
+            }
+        });
+    }
+
+    //显示位置
+    function ShowLocation(lng, lat, name, address) {
+        if (lng != null && lat != null) {
+            var latitude = parseFloat(lat);
+            var longitude = parseFloat(lng);
+
+            var name = '';
+            var address = '';
+            $("li[storeid=" + storeid + "]").each(function () {
+                name = $(this).attr('poiname');
+                address = $(this).attr('poiaddress');
+            });
+
+            wx.openLocation({
+                latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
+                longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
+                name: name, // 位置名
+                address: address, // 地址详情说明
+                scale: 28, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+            });
+        }
+        else {
+            alert_h("该门店未绑定位置！");
+        }
+    }
+
+
+
+    //新添加
+    $('.rptReceipt li a').click(function () {
+        $('.rptReceipt button').html($(this).attr('briefReceipt') + '<span class="caret"></span>');
+        var receiptId = $(this).attr('ReceiptId');
+        $('#selectReceipt').val(receiptId);
+    });
+
+    $('.selectPaymentType li a').click(function () {
+        $('.selectPaymentType button').html($(this).html() + '<span class="caret"></span>');
+        $('#selectPaymentType').val($(this).attr('name'));
+    });
+ 
+
+    $('.selectShipToDate li a').click(function () {
+        $('.selectShipToDate button').html($(this).html() + '<span class="caret"></span>');
+        $('#selectShipToDate').val($(this).attr('name'));
+    });
+
+    $('.coupon li a').click(function () {
+        $('.coupon button').html($(this).html() + '<span class="caret"></span>');
+        $('#selectCoupon').val($(this).attr('name'));
+        var oldCouponCost = parseFloat($('#couponcost').html());
+        var newCouponCost = parseFloat($(this).attr('value'));
+        $('#couponcost').html(newCouponCost);
+        var total = parseFloat($('#total').html());
+        total += oldCouponCost;
+        total -= newCouponCost;
+        $('#total').html(total.toFixed(2));
+
+    });
+
+    $('.redpager li a').click(function () {
+        $('.redpager button').html($(this).html() + '<span class="caret"></span>');
+        $('#selectRedPager').val($(this).attr('name'));
+        var oldRedPagerCost = parseFloat($('#redpagercost').html());
+        var newRedPagerCost = parseFloat($(this).attr('value'));
+        $('#redpagercost').html(newRedPagerCost);
+        var total = parseFloat($('#total').html());
+        total += oldRedPagerCost;
+        total -= newRedPagerCost;
+        $('#total').html(total.toFixed(2));
+    });
+    function registSelectShippingType() {
+
+        $('.selectShippingType li a').click(function () {
+            $('.selectShippingType button').html($(this).html() + '<span class="caret"></span>');
+            $('#selectShippingType').val($(this).attr('name'));
+
+            var oldShipCost = parseFloat($('#shipcost').html());
+            var newShipCost = parseFloat($(this).attr('value'));
+
+            $('#shipcost').html(newShipCost);
+            var total = parseFloat($('#total').html());
+            total -= oldShipCost;
+            total += newShipCost;
+            $('#total').html(total.toFixed(2));
+        });
+
+    }
+
+    function refreshShippingTypes(regionId) {
+        $.post('/api/vshopprocess.ashx?action=GetShippingTypes',
+         {
+             regionId: regionId,
+             buyAmount: getParam('buyAmount'),
+             productSku: getParam('productSku'),
+             groupBuyId: $('#groupbuyHiddenBox').val()
+         },
+
+         function (shippingTypes) {
+             $('#shippingTypeUl li').remove();
+             var html = '';
+             $.each(shippingTypes.data, function (i, shippingType) {
+                 html += '<li><a href="#" name="' + shippingType.modelId + '" value="' + shippingType.freight + '">' + shippingType.text + '</a></li>';
+             });
+             $('.selectShippingType button').html('请选择配送方式<span class="caret"></span>');
+             $('#shippingTypeUl').html(html);
+             $('#selectShippingType').val('');
+
+             //修改总价
+             var oldShipCost = parseFloat($('#shipcost').html());
+             var total = parseFloat($('#total').html());
+             total -= oldShipCost;
+             $('#total').html(total.toFixed(2));
+             $('#shipcost').html('0.00');
+             registSelectShippingType();
+
+             //如果为服务商品默认包邮，不用选择，2017-07-25增加服务商品隐藏配送方式
+             if ($("#productSource").val() == "3") {
+                 $(".selectShippingType").children().find("a").eq(0).click();
+                 $(".selectShippingType").hide();
+             }
+
+         }, "json");
+
+
+    }
+    
+    //根据当前的商品和礼品价格屏蔽相应的板块
+    $(function () {
+        registSelectShippingType();
+        //如果没有礼品,隐藏
+        if ($('#totalPoint').html() == 0) {
+            $('#needPoint').hide();
+            $('#giftList').hide();
+        }
+
+        //如果没有商品,隐藏
+        if ($('#total').html() == "0.00") {
+            $('#itemList').hide();
+        }
+        //如果有且仅有礼品时，不必选择发票类型、配送方式、支付方式，直接跳过，生成订单。2016-11-29修改
+        if ($('#total').html() == "0.00" && $('#totalPoint').html() > 0) {
+            $(".rptReceipt").hide();
+            $(".selectShippingType").children().find("a").eq(0).click();
+            $(".selectShippingType").hide();
+            $(".selectPaymentType").hide();
+        }
+        //团购时，去掉货到付款
+        if (getParam('from') == "groupBuy") {
+            $('#selectPaymentType a[name="0"]').parent().remove();
+            $('.coupon').hide();
+            $('.redpager').hide();
+            $('.detailLink').attr('href', '/vshop/GroupBuyProductDetails.aspx?groupBuyId=' + getParam('groupbuyId'));
+            $('#orderProductsChange').hide();
+        }
+
+        if (getParam('from') == 'signBuy')
+            $('#orderProductsChange').hide();
+
+        if ($('.coupon li').length == 0)
+            $('.coupon').hide();
+
+        if ($('.redpager li').length == 0)
+            $('.redpager').hide();
+        var regionId = $('#regionId').val();
+        refreshShippingTypes(regionId);
+
+    });
+
+</script>
+<script src="/utility/vshoping.helper.service.js?v=1" type="text/javascript"></script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<!--<hi:common_footer runat="server" />-->

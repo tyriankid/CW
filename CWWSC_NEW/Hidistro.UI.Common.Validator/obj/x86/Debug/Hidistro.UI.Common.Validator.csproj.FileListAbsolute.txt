@@ -1,0 +1,5 @@
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.UI.Common.Validator\bin\Debug\Hidistro.UI.Common.Validator.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.UI.Common.Validator\bin\Debug\Hidistro.UI.Common.Validator.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.UI.Common.Validator\obj\x86\Debug\Hidistro.UI.Common.Validator.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.UI.Common.Validator\obj\x86\Debug\Hidistro.UI.Common.Validator.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.UI.Common.Validator\obj\x86\Debug\Hidistro.UI.Common.Validator.csprojResolveAssemblyReference.cache

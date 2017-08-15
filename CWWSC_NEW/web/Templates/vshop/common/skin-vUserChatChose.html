@@ -1,0 +1,89 @@
+﻿<hi:common_header runat="server" />
+<style>
+    .roleMark {
+        background: #c1bbbb;
+        color: #ffffff;
+        font-size: 1.4rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height:46px;
+        line-height:46px;
+        width:80px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .ask-box .goods-box{padding: 0;margin:0;border-top:0;}
+    .ask-box .goods-box:last-child{padding-bottom:0;}
+    .goods-box .name {
+        height:24px;
+    }
+    .goods-box img {
+        height:40px;
+        width:40px;
+        border-radius:50%;
+        position:absolute;
+        top:3px;
+            left:10px;
+    }
+  .goods-box .info{
+            min-height:46px;
+            padding-left:66px;
+        margin:0;
+        }
+    .messageWords {
+        margin-top: 10px;
+        height: 20px;
+        line-height: 20px;
+        width: 80%;
+        display: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #999;
+    }
+    .goods-box .price {
+        font-size:12px;
+        padding: 0;
+        display:none;
+    }
+    .goods-box .name{height: 46px;line-height:46px;}
+    .ask-box,.pbox{padding:0;}
+</style>
+<div class="pbox" id="productListContainer" >
+    <div class="ask-box">
+        <div id="consulationsList" style="padding-top: 10px;">
+            <hi:vshoptemplatedrepeater id="rptDzList" templatefile="/Tags/skin-Common_UserChatChoseList.ascx" runat="server" />
+            <hi:vshoptemplatedrepeater id="rptDyList" templatefile="/Tags/skin-Common_UserChatChoseList.ascx" runat="server" />
+        </div>
+        <div id="pager">  </div>
+    </div>
+</div>
+<input type="hidden" clientidmode="Static" value="" runat="server" id="txtTotal" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentUserId" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentDomain" />
+
+<script src="/Utility/common.js" type="text/javascript"></script>
+<script src="/Utility/pager.js" type="text/javascript"></script>
+<script src="../script/dpt.js" type="text/javascript"></script>
+
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("[role='chatUser']").each(function () {
+            var locationstr = $("#currentDomain").val() + ":3000/userchat.html?k=";
+            var attrstr = getChatAttrs($("#currentUserId").val(), $(this).attr("userid"));
+            $(this).attr("href", locationstr + escape(attrstr));
+
+        });
+    });
+    for (var i = 1; i <= $(".well").length;i++){
+        $(".well").eq(i -1).find(".roleMark").html("客服" + i);
+    }
+</script>
+<Hi:Common_Footer runat="server" />

@@ -1,0 +1,82 @@
+﻿<hi:common_header runat="server" />
+    <div class="pbox">
+        <a id="aLinkToAdd" runat="server"><input type="button" class="btn btn-danger btn-block" value="添加增值税发票信息"></a>
+    </div>
+    <div class="address-kuang">
+         <hi:vshoptemplatedrepeater id="rptvReceipt" templatefile="/Tags/skin-Common_UserReceipt.ascx" runat="server" />
+    </div>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+
+<script type="text/javascript">
+
+    function SetDefault(obj,target) {     
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: {
+                shippingid: obj,
+                action: "SetDefaultShippingAddress"
+            },
+            success: function (resultData) {
+                if (resultData.success) {
+                    var returnURL = window.location.search.substr(window.location.search.indexOf("returnUrl=") + 10);
+                    if (returnURL != undefined) {
+                        location.href=decodeURIComponent(returnURL);
+                    }
+                    $("li").removeClass("active");
+                    $("li").has($(target)).addClass("active");
+                }
+                else {
+                    alert_h("设置失败");
+                }
+            }
+        });
+    }
+
+    function UpdateReceipt(receiptId){          
+        if (window.location.search.indexOf("returnUrl=") == -1) {
+            location.href = "EditReceipt.aspx?ReceiptId=" + receiptId;
+            return false;
+        }          
+        var returnURL = window.location.search.substr(window.location.search.indexOf("returnUrl=") + 10);
+        if (returnURL == undefined) {
+            location.href = "EditReceipt.aspx?ReceiptId=" + receiptId;
+            return false;
+            
+        }
+        location.href = "EditReceipt.aspx?ReceiptId=" + receiptId + "&returnUrl=" + returnURL;
+    }
+
+    function DeleteReceipt(obj, target) {
+        if ($("li").has($(target)).hasClass("active"))
+       {
+            alert_h("不能删除默认发票信息，请先默认其它发票信息！");
+            return;
+        }
+        if (confirm("确认要删除发票信息吗？")) {
+            $.ajax({
+                url: "/API/VshopProcess.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: {
+                    receiptId: obj,
+                    action: "DelReceipt",
+                },
+                success: function (resultData) {
+                    if (resultData.success) {
+                        location.reload();
+                    }
+                    else {
+                        alert_h("删除失败");
+                    }
+                }
+            });
+        }
+    }
+
+</script>
+<hi:common_footer runat="server" />

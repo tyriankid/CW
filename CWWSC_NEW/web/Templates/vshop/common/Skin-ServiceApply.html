@@ -1,0 +1,71 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {
+    background:#ffffff;
+    }
+    .yongjin-box {overflow:hidden;margin-bottom:10px;background:#fff;padding:0;}
+    .table-nr-left tr th{text-align:center;}
+    .table-nr-left tr td{text-align:center;line-height:30px;}
+    .new-addBtn {background:#37A9FF;padding: 0.6rem 1.6rem;border-color: none;position:fixed;bottom:48px;width:100%;display:inline-block;color:#ffffff;font-size: 1.6rem;text-align: center;border: 2px solid #C0BFBF;}
+    .del {padding:0.7rem 0.2rem 0.7rem 0.4rem;font-size: 1.2rem;border-radius: 4px;}
+    .doc {padding:0.7rem 0.2rem 0 0;font-size: 1.2rem;border-radius: 4px;}
+    @media screen and (min-width:340px) {
+         .del {padding:0.7rem 0.9rem 0.7rem 0.4rem;}
+    }
+</style>
+<div class="yongjin-box">
+    <table class="table-nr-left" style="table-layout:fixed;">
+        <thead>
+            <tr>
+                <th style="width:44%;border-bottom:10px solid #E5E5E5;"></th>
+                <!--<th>申请品类</th>-->
+                <th style="width:20%;border-bottom:10px solid #E5E5E5;"></th>
+                <th style="width:36%;border-bottom:10px solid #E5E5E5;"></th>
+            </tr>
+        </thead>
+        <hi:vshoptemplatedrepeater id="ServiceApplyRepeater" templatefile="/Tags/skin-ServiceApplyRepeater.ascx" runat="server" />
+        <!--<hi:vshoptemplatedrepeater id="StoreRuleRepeater" templatefile="/Tags/skin-StoreRuleRepeater.ascx" runat="server" />-->
+    </table>
+    <script type="text/javascript">
+        $(".doc").click(function () {
+            var DcID = $(this).attr("DcID");
+            $("body").css({"overflow":"hidden"})
+            $(".iframeBox").show(1000).find("iframe").attr("src", "ApplyOperat.aspx?DcId=" + DcID);
+        })
+        function addStoreMember() {
+            $(".iframeBox").show(1000).find("iframe").attr("src", "ApplyOperat.aspx");
+        }
+        $(".del").click(function () {
+            var DcID = $(this).attr("DcID");
+            var ApplyDate = $(this).attr("Date");
+            myConfirm('询问', '确认要删除【' + ApplyDate + '】的申请吗？', '确定删除', function () {
+                $.ajax({
+                    url: "/api/ServiceClassHandler.ashx",
+                    type: 'post', dataType: 'json', timeout: 1000,
+                    data: { action: "DelApply", DcID: DcID },
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.success) {
+                            alert_h(data.msg, function () {
+                                window.location.reload();
+                            });
+                            return;
+                        }
+                        else {
+                            alert_h(data.msg);
+                            return;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+<div  class="iframeBox" style =" width:100%; height:100%; overflow:hidden;position: fixed;top: 0;left: 0;bottom:0;right: 0;margin: auto; z-index: 99999;display:none;">
+        <div  style="width:100%; height:100%;" >
+            <iframe style="width:100%; height:100%;border: none;"  >
+            </iframe>
+        </div>
+</div>
+<a class="new-addBtn" onclick="addStoreMember()">申请服务门店</a>
+<hi:common_footer runat="server" />

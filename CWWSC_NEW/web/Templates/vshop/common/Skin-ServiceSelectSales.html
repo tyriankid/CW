@@ -1,0 +1,173 @@
+﻿<hi:common_header runat="server" />
+<style>
+    .goods-list-p li {overflow: hidden;list-style: none;padding:0.6rem 0;}
+    .goods-list-p .left{overflow: hidden;position: initial;float:left;margin: 0 10px;}
+    .goods-list-p .right {overflow: hidden;float:left;padding:0;}
+    .goods-list-p .right .name{line-height:25px;max-height:none;margin:0;height:25px;}
+    .new-btnBox {position:fixed;bottom: 48px;width:100%;}
+    .new-btnBox .new-addBtn111 {
+        background: #999;
+        padding: 0.6rem 1.6rem;
+        border-color: none;
+        width: 50%;
+        display: inline-block;
+        color: #ffffff;
+        font-size: 1.6rem;
+        text-align: center;
+        float:left;
+    }
+    .new-btnBox .new-addBtn {
+        float: left;
+        width:50%;
+        position:initial;
+    }
+</style>
+    <div class="well well-addrbox clearfix">
+        <div>
+            <ul>
+                <li>订单号：<span id="spanvalue1"></span></li>
+                <li>用户昵称：<span id="spanvalue2"></span></li>
+                <li>成交金额：<span id="spanvalue3"></span></li>
+            </ul>
+        </div>
+
+        <!--start 服务门店-->
+        <div class="panel panel-default" id="itemListDis"><!--style="display:none" -->
+            <div class="panel-heading order-shopcart">
+                <h3 class="panel-title">
+                    服务店员
+                </h3>
+            </div>
+            <div id="saleslist" class="panel-body goods-list-p">
+                
+            </div>
+        </div>
+        <!--end 服务门店-->
+    </div>
+    <!--<div class="moneyFixbox clearfix">
+        <button type="button" class="btn-danger" id="selectorder">分配订单</button>
+    </div>-->
+    <div class="new-btnBox">
+        <a class="new-addBtn111" onclick="refuseServiceSalesId()">拒绝配单</a>
+        <a class="new-addBtn" onclick="setServiceSalesId()">确定服务人员</a>
+    </div>
+
+<style>
+    .selected{background: #e6f2ff!important;}
+    .new-addBtn {background:#FF5101;padding: 0.6rem 1.6rem;border-color: none;position:fixed;bottom:48px;width:100%;display:inline-block;color:#ffffff;font-size: 1.6rem;text-align: center;}
+</style>
+<script type="text/javascript">
+    var serviceuserid = GetQueryString("serviceUserId");
+    var orderid = GetQueryString("OrderId");
+    var username = GetQueryString("UserName");
+    var ordertotal = GetQueryString("OrderTotal");
+    var productid = GetQueryString("ProductId");
+
+
+    $(function () {
+        $("#spanvalue1").html(orderid);
+        $("#spanvalue2").html(username);
+        $("#spanvalue3").html(ordertotal);
+        //加载服务店员
+        if (serviceuserid != null && serviceuserid != "") {
+            getListDis(serviceuserid);
+        }
+    });
+
+    //拒绝分配
+    function refuseServiceSalesId() {
+        //$(".iframeBox").show(300).find("iframe").attr("src", "RefuseServiceSales.aspx");
+        this.window.location.href = "/Vshop/RefuseServiceSales.aspx?OrderId=" + orderid + "&ProductId=" + productid;
+    }
+
+    //设置服务人员
+    function setServiceSalesId() {
+        //验证是否选择了服务门店
+        var selectSalesId = "";
+        var selectname = "";
+        $("#saleslist li").each(function () {
+            if ($(this).hasClass("selected")) {
+                selectSalesId = $(this).attr("dsid");
+                selectname = $(this).attr("dsname");
+            }
+        });
+        if (selectSalesId == "") {
+            alert_h("请选择服务店员");
+            return false;
+        }
+        myConfirm('询问', '确认要将订单分配给【' + selectname + '】吗？', '确定分配', function () {
+            //分配服务店员
+            var data = {};
+            data.OrderId = orderid;
+            data.SelectSalesId = selectSalesId;
+            $.post("/api/StoreHandler.ashx?action=setServiceSalesId", data, function (json) {
+                if (json.Result == "OK") {
+                    alert_h(json.Msg, function () {
+                        this.window.location.href = "/Vshop/DistributorOrdersService.aspx";
+                    });
+                }
+            });
+        });
+    }
+
+    //显示门店认证的服务店员信息
+    function getListDis(serviceuserid) {
+        var data = {};
+        data.ServiceUserId = serviceuserid;
+        //Post 传入门店ID，返回可以提供服务的服务店员集合
+        $.post("/api/StoreHandler.ashx?action=serviceSalesList", data, function (json) {
+            if (json.Result == "OK") {
+                $("#saleslist").empty()//情空HTML内容
+                //得到数据集， 无刷新加载绑定数据
+                if (json.Count <= 0) {
+                    $("#saleslist").append("<div><span>您的门店没有查询到认证的服务店员。</span></div>");
+                    return;
+                }
+                for (var i = 0; i < json.Data.length; i++) {
+                    var userimg = json.Data[i].UserHead;
+                    if (userimg == "") userimg = "";//设置默认图片地址
+                    var html = '<li dsid="' + json.Data[i].DsID + '" dsname="' + json.Data[i].DsName + '" dsphone="' + json.Data[i].DsPhone + '" >'
+                            + '<div class="box">'
+                            + '<div class="left"><img id="aa" class="bb" style="height:50px; width:50px" src="' + userimg + '" /></div>'
+                            + '<div class="right">'
+                            + '<div class="bcolor name">' + json.Data[i].DsName + '</div>'
+                            + '<div class="bcolor name">' + json.Data[i].DsPhone + '</div>'
+                            + '</div></div></li>';
+                    $("#saleslist").append(html);
+                }
+                //绑定点击事件
+                $("#saleslist li").click(function () {
+                    if ($(this).hasClass("selected")) {
+                        $(this).removeClass("selected");
+                    } else {
+                        $(this).addClass("selected");
+                    }
+                    var liid = $(this).attr("dsid");
+                    $("#saleslist li").each(function () {
+                        if (liid != $(this).attr("dsid")) {
+                            $(this).removeClass("selected");
+                        }
+                    });
+                });
+            }
+            else {
+                alert_h(json.Msg);
+            }
+        });
+    }
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<hi:common_footer runat="server" />

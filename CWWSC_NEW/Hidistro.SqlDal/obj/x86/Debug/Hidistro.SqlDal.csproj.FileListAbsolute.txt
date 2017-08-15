@@ -1,0 +1,17 @@
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.SqlDal.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.SqlDal.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Core.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Entities.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Membership.Core.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Core.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\obj\x86\Debug\Hidistro.SqlDal.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\obj\x86\Debug\Hidistro.SqlDal.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hishop.Components.Validation.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\LitJson.dll
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Entities.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hidistro.Membership.Core.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\bin\Debug\Hishop.Components.Validation.pdb
+C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.SqlDal\obj\x86\Debug\Hidistro.SqlDal.csprojResolveAssemblyReference.cache

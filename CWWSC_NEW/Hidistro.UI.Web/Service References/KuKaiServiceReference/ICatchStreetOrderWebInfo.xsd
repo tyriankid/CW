@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://service.pub.streetorder.so.bs.nc/ICatchStreetOrderWebInfo" xmlns="http://www.w3.org/2001/XMLSchema">
+  <annotation>
+    <documentation source="eip_version">65</documentation>
+  </annotation>
+  <complexType name="sendStreetOrderToNCResponse">
+    <sequence>
+      <element name="returnArg" type="string">
+        <annotation>
+          <documentation source="source.description">null</documentation>
+          <documentation source="source.displayName">returnArg</documentation>
+          <documentation source="source.fullClassName">null</documentation>
+          <documentation source="source.AnnotateeName">null</documentation>
+          <documentation source="source.LENGTH" />
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="sendStreetOrderToNCResponse" type="tns:sendStreetOrderToNCResponse" />
+  <complexType name="sendStreetOrderToNC">
+    <sequence>
+      <element name="vo" type="string">
+        <annotation>
+          <documentation source="source.description">null</documentation>
+          <documentation source="source.displayName">vo</documentation>
+          <documentation source="source.fullClassName">null</documentation>
+          <documentation source="source.AnnotateeName">null</documentation>
+          <documentation source="source.LENGTH" />
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="sendStreetOrderToNC" type="tns:sendStreetOrderToNC" />
+</schema>

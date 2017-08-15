@@ -1,0 +1,112 @@
+﻿*{padding:0;margin:0;}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body{padding:0px;font-size:12px;line-height:24px;font-family:"宋体"; font-family:Arial, Helvetica, sans-serif;
+opacity:0.9;}
+form,ul,li,ol,li,dl,dt,dd,img,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0; }
+h1,h2,h3,h4,h5,h6{font-size:12px;}
+input,select{font-size:12px;}
+img{border:0;}
+ul,li{list-style-type:none;}
+strong{font-weight:normal;}
+em {font-style:normal;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+/* Link ?? 2009.7.28 */
+a{color:#393939;text-decoration:none; cursor:pointer;}
+a:hover{color: #333333;text-decoration:underline;}
+.color_6e ,.color_6e a{ color:#6E6E6E;}
+.display_no{display:none;}
+.display_yes{display:block;}
+.clear{ clear:both;}
+a, img{ border:0;}
+#sidle ul{
+    width:5760px;
+    height:648px;
+    overflow:hidden
+}
+#sidle ul li{
+    float:left;
+}
+.login_box{display: block;
+    position: absolute;
+    right: 5%;
+    top: 13%;
+    z-index: 7;
+    margin-left: 10%;
+    width: 320px;
+    height: 390px;
+    color: #fff;
+}
+.m-loginboxbg {
+    position: absolute;
+    right: 5%;
+    top: 13%;
+    z-index: 6;
+    margin-left: 10%;
+    width: 320px;
+    height: 390px;
+    filter: alpha(opacity = 40);
+    background: #000;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.login-border{
+    padding: 30px 0 0 30px;
+    font-size: 12px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+.login-logo{ padding-bottom:30px;}
+.login_box p{ padding:10px 0 0 90px; color:#6a6a6a;}
+.login-formbox{ padding:0 0 0 0; overflow:hidden; position:relative;}
+.login-formbox dl{ margin-bottom:7px; overflow:hidden;}
+.login-formbox dt{ float:left;font-size:12px ;width:80px; line-height:38px; height:38px;}
+.login-formbox dd{ display:block; float:left; font-size:14px ; font-weight:bold;width:260px; vertical-align:top; height:38px; overflow:hidden;}
+.login-formbox dd input{ display:block;border: 0; color: #5d5d5d; height: inherit;font-size:13px;text-indent:10px; width: 100%;background: #fff;outline:none}
+.login-formbox dd span {display:block;height:inherit;}
+/*.login-formbox dd input.user{ background:url(../images/login_user.png) no-repeat;}
+.login-formbox dd input.pwd{ background:url(../images/login_pwd.png) no-repeat;}*/
+.login-formbox dd input.yanzh{ /*background:url(../images/login_yanzh.png) no-repeat*/;width:88px;}
+.yanzh_bg, .yanzh_img{ display:block; float:left;}
+.img_txtCode{ margin:12px 0 0 10px; float:left;}
+.img_txtCode_img{ height:30px; display:block; margin:5px 0 0 10px;}
+
+/*.login-formbox .tijiao_bg{border:0; width:45px; height:45px; background:url(../images/login_enter.png) no-repeat; position:absolute;bottom:0px; left:355px;}*/
+.login-formbox .tijiao{ border:0; width:45px; height:45px;background:none; font-size:16px;color:white; }
+.denglu {    text-align: center;
+    vertical-align: middle;
+    margin: 10px 0;
+    width: 260px;
+    background: -webkit-linear-gradient(top, #3086bf, #2d7eb3);
+    background: -moz-linear-gradient(top, #3086bf, #2d7eb3);
+    background: -ms-linear-gradient(top, #3086bf, #2d7eb3);cursor:pointer}
+.denglu:hover {
+    background: #5492bb;
+    background: -webkit-linear-gradient(top, #5695bf, #508cb3);
+    background: -moz-linear-gradient(top, #5695bf, #508cb3);
+    background: -ms-linear-gradient(top, #5695bf, #508cb3);
+}
+
+   
+
+
+.tips{color:#fff;}
+.tips img{ margin-right:5px;}
+
+.g-ft {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9;
+    color: #fff;
+}
+.m-footer {
+    color: #0069b9;
+    white-space: nowrap;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+#silde{
+    margin-top:-10px;
+}

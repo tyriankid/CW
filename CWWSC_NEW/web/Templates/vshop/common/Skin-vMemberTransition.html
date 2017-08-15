@@ -1,0 +1,97 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {
+        height: 100%;
+    }
+    html {
+        height: 100%;
+    }
+    .transition {
+        background: #805050;
+        text-align: center;
+        font-size: 3rem;
+        margin-top:10px;
+        color: #ffffff;
+    }
+    .topBakc a{
+        color:#ffffff;
+    }
+
+     .countDiv ul{
+         width:100%;
+         height:50px;
+          background:#ffffff;
+     }
+    .countDiv ul li{
+        float:left ;
+        width:33%;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        font-size:1.6rem;
+        border-bottom:3px solid #ffffff;
+    }
+    
+</style>
+<!--<div class="topBakc" style="height:4rem;line-height:4rem; background-color:rgba(27, 31, 76, 0.56); text-align: center; font-size: 1.6rem;position: relative;">
+    <a style="position: absolute;left: 1rem;top:0;" href="javascript:history.go(-1)"><img style="width: 2rem;" src="../images/leftArr.png" /></a><a>我的会员</a>
+</div>-->
+<div class="countDiv" style="height:91%">
+    <ul>
+        <li  class="DPmember" style="border-bottom:3px solid #f90;border-right:1px solid #CCC;">店铺会员</li>
+        <li  class="JLmember"  style="border-right:1px solid #CCC;">金立会员</li>
+        <li  class="NXmember">粘性会员</li>
+    </ul>
+ <!--<div class="transition" onclick="WGOHref()" style="background:rgba(30, 70, 125, 0.529412)">店铺会员</div>
+<div class="transition" onclick="JLGOHref()" style="background:rgba(97, 42, 42, 0.239216)">金立会员</div>
+<div class="transition" onclick="NXGOHref()">粘性会员</div>-->
+    <div class="iframeBox" style="width: 100%; height: 80%; overflow: hidden; position: fixed; top: 0; left: 0; bottom: 0; right: 0; margin: auto; z-index: 99999; display: block;">
+        <div style="width: 100%; height: 100%;">
+            <iframe style="width: 100%; height: 100%; border: none;" src="MyUsers.aspx"></iframe>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    //var ulHeight = window.screen.height - 48 - 48 - 30;
+ 
+    //$(".countDiv").css({ "height": ulHeight + "px" });
+    //$(".transition").css({ "height": ulHeight / 3 + "px" })
+    //$(".transition").css({ "line-height": ulHeight / 3 + "px" })
+    
+    //禁用右上角菜单
+    //document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    //    WeixinJSBridge.call('hideOptionMenu');
+    //});
+    //function WGOHref() {
+    //    location.href = "MyUsers.aspx";
+    //}
+    //function JLGOHref() {
+    //    location.href = "MemberCollection.aspx?type=JL";
+    //}
+    //function NXGOHref() {
+    //    location.href = "MemberCollection.aspx?type=NX";
+    //}
+
+
+ 
+    $(".DPmember").click(function () {
+        $(".iframeBox").show(1000).find("iframe").attr("src", "MyUsers.aspx");
+        $(".countDiv").find(".DPmember").css({ "borderBottom": "3px solid #f90" });
+        $(".countDiv").find(".JLmember").css({ "borderBottom": "3px solid #ffffff" });
+        $(".countDiv").find(".NXmember").css({ "borderBottom": "3px solid #ffffff" });
+    });
+    $(".JLmember").click(function () {
+        $(".iframeBox").show(1000).find("iframe").attr("src", "MemberCollection.aspx?type=JL");
+        $(".countDiv").find(".JLmember").css({ "borderBottom": "3px solid #f90" });
+        $(".countDiv").find(".DPmember").css({ "borderBottom": "3px solid #ffffff" });
+        $(".countDiv").find(".NXmember").css({ "borderBottom": "3px solid #ffffff" });
+    })
+    $(".NXmember").click(function () {
+        $(".iframeBox").show(1000).find("iframe").attr("src", "MemberCollection.aspx?type=NX");
+        $(".countDiv").find(".NXmember").css({ "borderBottom": "3px solid #f90" });
+        $(".countDiv").find(".DPmember").css({ "borderBottom": "3px solid #ffffff" });
+        $(".countDiv").find(".JLmember").css({ "borderBottom": "3px solid #ffffff" });
+    })
+</script>
+<hi:common_footer runat="server" />

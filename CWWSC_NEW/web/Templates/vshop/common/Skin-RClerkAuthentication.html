@@ -1,0 +1,182 @@
+﻿<hi:common_header runat="server" />
+<link href="../style/storeInfo.css" rel="stylesheet" />
+<style>
+    ul.memberorders-title li {
+        width: 50%;
+    }
+
+    ul.memberorders-title .rzActive {
+        border-bottom: 2px solid #F60;
+    }
+
+    input {
+        outline: none;
+        border: 1px solid #ccc;
+        height: 34px;
+        border-radius: 4px;
+        width: 100%;
+        color: black;
+        text-indent: 0.8em;
+        margin-bottom: 0.6rem;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #a3a3a3;
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-family: 'Microsoft YaHei';
+    }
+
+    .InpBox {
+        padding: 0 10px;
+    }
+
+        .InpBox dt {
+            width: 35%;
+        }
+
+        .InpBox dd {
+            width: 64%;
+        }
+
+    #selectDsType:focus option:checked {
+        background-image: linear-gradient(#fada00, #fada00);
+    }
+
+    .selectmember {
+        outline: none;
+        border: 1px solid #ccc;
+        height: 34px;
+        border-radius: 4px;
+        width: 100%;
+        color:rgb(163, 163, 165);
+        text-indent: 0.8em;
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem
+    }
+
+    .description h1 {
+        margin: 15px 0;
+    }
+</style>
+<ul class="clearfix  orders-title memberorders-title  title_bg" style="display:none">
+    <li><a href="/Vshop/StoreIdentification.aspx">店长认证</a></li>
+    <li class="rzActive"><a href="/Vshop/ClerkAuthentication.aspx">店员认证</a></li>
+</ul>
+<div class="">
+    <div class="">
+        <img src="/images/storeInfo.jpg" width="100%" />
+    </div>
+    <div class="description">
+        <h1><span>店员认证</span></h1>
+        <form runat="server">
+            <table>
+                <dl class="InpBox clearfix">
+                    <select id="selectDsType" class="selectmember" >
+                        <option value="">请选择会员类型</option>
+                        <option value="0">导购店员</option>
+                        <option value="1">服务店员</option>
+                    </select>
+                </dl>
+       
+                <dl class="InpBox clearfix">
+                    <asp:textbox id="DsName" runat="server" class="text" placeholder="姓名"></asp:textbox>
+                </dl>
+                <dl class="InpBox clearfix">
+                    <asp:textbox id="DsPhone" runat="server" class="text" placeholder="电话"></asp:textbox>
+                </dl>
+
+            </table>
+            <div class="submitBox">
+                <input type="button" id="rzbtn" class="btn-submit" value="店员认证" onclick="javascript: rzbtn_click()" />
+            </div>
+        </form>
+        <div style="text-align: center; color: #f60;">
+            <br />
+            <span>提示：亲，此认证只针对创维O2O直营店店员</span>
+        </div>
+        <asp:literal id="litApplicationDescription" runat="server"></asp:literal>
+    </div>
+</div>
+<%<hi:weixinset id="weixin" runat="server"></hi:weixinset>%>
+<asp:literal id="customInputs" runat="server"></asp:literal>
+<input  runat="server" id="hidIsStoreManage" type="hidden" clientidmode="Static"/>
+<script type="text/javascript">
+
+    //---star  yk 当前为店长时禁止认证 2017-7-31并加入微信链接分享
+    $(function () {
+        if ($("#hidIsStoreManage").val() != "") {
+            $("#selectDsType").attr("disabled", "disabled");
+            $("#RClerkAuthentication_DsName").attr("disabled", "disabled");
+            $("#RClerkAuthentication_DsPhone").attr("disabled", "disabled");
+            $("#rzbtn").hide();
+            return;
+        }
+    })
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    //--------end
+
+    //跳转到店长认证
+    function dybtn_click() {
+        window.location.href = "/Vshop/StoreIdentification.aspx";
+    }
+    //认证方法
+    function rzbtn_click() {
+        if ($("#selectDsType").val() == "") {
+            alert_h("请选择会员类型");
+            return;
+        }
+        if ($("#RClerkAuthentication_DsName").val().trim() == "") {
+            alert_h('请输入店员姓名');
+            return;
+        }
+        if ($("#RClerkAuthentication_DsPhone").val().trim() == "") {
+            alert_h("请输入店员电话");
+            return;
+        }
+        //执行认证
+        alert("开始认证");
+        $.ajax({
+            url: "/API/RzSelectStoreSales.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "RzStore", StoreID: GetQueryString("DisUserId"), DsType: $("#selectDsType").val(), DsName: $("#RClerkAuthentication_DsName").val(), DsPhone: $("#RClerkAuthentication_DsPhone").val() },
+            success: function (resultData) {
+                alert("执行完成");
+                if (resultData.Status == "Ok") {
+                    if ($("#selectDsType").val() == "0")
+                        alert_h("认证成功，恭喜您成为【" + resultData.StoreName + "】的导购店员。", function () { location.href = '/Vshop/DistributorCenter.aspx' });
+                    else
+                        alert_h("认证成功，恭喜您成为【" + resultData.StoreName + "】的服务店员。", function () { location.href = '/Vshop/MemberOrdersService.aspx?status=0' });
+                }
+                if (resultData.Status == "Fail") {
+                    alert_h("认证失败，数据存储发生错误！");
+                }
+                if (resultData.Status == "Already") {
+                    alert_h("此店员已经认证！");
+                }
+                if (resultData.Status == "Inexistence") {
+                    alert_h("认证失败，认证信息错误！");
+                }
+            }
+        });
+    }
+    String.prototype.trim = function () {
+        return this.replace(/(^\s*)|(\s*$)/g, '');
+    }
+    var title ="创维O2O直营店店员认证";
+    var Dec = "亲，此认证只针对创维O2O直营店店员";
+    var imgUrl = "http://cwwsc.bigeergeek.com/templates/vshop/common/images/storeInfo.jpg";
+    var link = "http://cwwsc.bigeergeek.com/Vshop/ClerkAuthentication.aspx?DisUserId=" + GetQueryString("DisUserId");
+    WinXinShareMessage(title, Dec, link, imgUrl);
+</script>
+
+<div class="pbox">
+    <asp:literal runat="server" id="litButton"></asp:literal>
+</div>
+<hi:common_footer runat="server" />

@@ -1,0 +1,109 @@
+﻿<hi:common_header runat="server" />
+
+<div class="pbox well">
+    <h2 class="add-addr-tt">添加电子发票信息</h2>
+    <!--<div class="well add-addrbox">-->
+        <label><input id="radioGr" name="Fptype" type="radio" value="0" checked="checked" />个人 </label>
+        <label><input id="radioDw" name="Fptype" type="radio" value="1" />单位 </label>
+        <input id="CompanyName" type="text" class="form-control" maxlength="50" placeholder="您输入发票抬头">
+        <input id="TaxesCode" type="text" class="form-control bmargin" maxlength="50" placeholder="纳税识别号" style="display:none">
+        <div class="btn-dangerbox">
+            <button type="button" id="savemes" onclick="AddReceipt()" class="btn btn-danger btn-block bmargin">保存电子发票信息</button>
+        </div>
+    <!--</div>-->
+</div>
+<script type="text/javascript">
+
+    $(function () {
+        //增加选中radio联动设置
+        $("input[name='Fptype']").click(function () {
+            var $selectedvalue = $("input[name='Fptype']:checked").val();
+            if ($selectedvalue == 0) {
+                $("#CompanyName").attr("placeholder", "请输入发票抬头");
+                $("#TaxesCode").hide();
+            }
+            else {
+                $("#CompanyName").attr("placeholder", "请输入单位名称");
+                $("#TaxesCode").show();
+            }
+        });
+        
+    });
+
+    function AddReceipt() {
+        var isValite = true;
+        if ($("#CompanyName").val() == "") {
+            //$("#CompanyName").focus();
+            alert_h($("#CompanyName").attr('placeholder'));
+            isValite = false;
+            return false;
+        }
+        if ($("input[name='Fptype']:checked").val() == 1) {
+            if ($("#TaxesCode").val() == "") {
+                //$("#TaxesCode").focus();
+                alert_h($("#TaxesCode").attr('placeholder'));
+                isValite = false;
+                return false;
+            }
+        }
+        btnstate(0);
+        showResponse();
+    }
+
+    //设置按钮状态
+    function btnstate(obj) {
+        if (obj == 0) {
+            $("#savemes").text("正在保存...");
+            $("#savemes").attr({ "disabled": "disabled" });
+            maskayer(0);
+
+        }
+        else {
+            $("#savemes").text("保存电子发票信息");
+            $("#savemes").removeAttr("disabled");
+            maskayer(1);
+        }
+    }
+
+    function showResponse() {
+
+        $.ajax({
+            url: "/API/VshopProcess.ashx",
+            type: 'post',
+            dataType: 'json',
+            timeout: 10000,
+            data: {
+                action: "AddReceiptDz",
+                type1:$("input[name='Fptype']:checked").val(),
+                companyName: $("#CompanyName").val(),
+                taxesCode: $("#TaxesCode").val()
+            },
+            success: function (resultData) {
+                if (resultData.success) {
+                    if (window.location.search.indexOf("returnUrl=") == -1) {
+                        location.href = "/Vshop/ReceeiptDz.aspx";
+                        return false;
+                    }
+                    var returnURL = window.location.search.substr(window.location.search.indexOf("returnUrl=") + 10);
+                    if (returnURL == undefined) {
+                        location.href = "/Vshop/ReceeiptDz.aspx";
+                        return false;
+                    }
+                    location.href = decodeURIComponent(returnURL);
+                }
+                else {
+                    alert_h("添加失败");
+                    btnstate(1);
+                }
+            }
+        });
+    }
+
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<hi:common_footer runat="server" />

@@ -1,0 +1,68 @@
+﻿<hi:common_header runat="server" />
+<div class="pbox">
+    <div class="panel panel-default">
+        <input type="hidden" runat="server" clientidmode="Static" id="litType1" />
+        <input type="hidden" runat="server" clientidmode="Static" id="litType2" />
+        <div class="panel-heading" id="suppliertop">
+            <h3 class="panel-title">
+                供应商售后信息</h3>
+        </div>
+        <div class="panel-body offline-help" id="supplierinfo">
+            <div>
+                供应商名称：<asp:literal runat="server" id="litGysName" /></div><br />
+            <div>
+                电话：<asp:literal runat="server" id="litGysPhone" /></div><br />
+            <div>
+                地址：<asp:literal runat="server" id="litGysAddress" /></div>
+            <br />
+         </div>
+        <div class="panel-heading" id="storetop">
+            <h3 class="panel-title">
+                店铺售后信息</h3>
+        </div>
+        <div class="panel-body offline-help" id="storeinfo">
+            <div>
+                店铺名称：<asp:literal runat="server" id="litStoreName" /></div><br />
+            <div>
+                联系人：<asp:literal runat="server" id="litStoreManager" /></div><br />
+            <div>
+                电话：<asp:literal runat="server" id="litStoreNumber" /></div>
+        </div>
+        <div class="panel-heading" id="zdtop">
+            <h3 class="panel-title">
+                总店售后信息</h3>
+        </div>
+        <div class="pbox service" id="zdinfo">
+            <asp:literal runat="server" id="litSaleService" />
+         </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        if ($("#litType1").val() == "0") {
+            $("#storetop").hide();
+            $("#storeinfo").hide();
+        }
+        else {
+            $("#zdtop").hide();
+            $("#zdinfo").hide();
+        }
+        if ($("#litType2").val() != "1") {
+            $("#suppliertop").hide();
+            $("#supplierinfo").hide();
+        }
+    });
+
+
+    //隐藏右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+
+    //隐藏底部菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+
+<hi:common_footer runat="server" />

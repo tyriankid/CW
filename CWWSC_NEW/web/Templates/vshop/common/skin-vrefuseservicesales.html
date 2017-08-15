@@ -1,0 +1,50 @@
+﻿<hi:common_header runat="server" />
+<div class="pbox well">
+    <h2 class="add-addr-tt">拒绝配单</h2>
+    <textarea id="txtRefuse" class="form-control bmargin" rows="3" placeholder="拒绝配单原因"></textarea>
+    <button type="button" onclick="refuseServiceOrder()" class="btn btn-danger btn-block bmargin">拒绝配单</button>
+</div>
+<input name="address" id="hiorderid" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiproductid" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiskuid" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiOrderStatus" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiDiscountAmount" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiAdjustedPrice" runat="server" clientidmode="Static" type="hidden" />
+<input name="address" id="hiquantity" runat="server" clientidmode="Static" type="hidden" />
+<script type="text/javascript">
+
+    function refuseServiceOrder() {
+        //验证
+        if ($("#txtRefuse").val().trim() == "") {
+            //$("#txtRefuse").focus();
+            alert_h($("#txtRefuse").attr('placeholder'));
+            return false;
+        }
+        //提交拒绝
+        myConfirm('询问', '确认要拒绝订单【' + $("#hiorderid").val() + '】吗？', '确定拒绝', function () {
+            var money = parseFloat($("#hiAdjustedPrice").val()) * parseFloat($("#hiquantity").val()) - parseFloat($("#hiDiscountAmount").val());
+            //分配服务店员
+            var data = {};
+            data.OrderId = $("#hiorderid").val();
+            data.Money = money;
+            data.ProductId = $("#hiproductid").val();
+            data.SkuId = $("#hiskuid").val();
+            data.OrderStatus = $("#hiOrderStatus").val();
+            data.RefuseMsg = $("#txtRefuse").val().trim();
+            $.post("/api/StoreHandler.ashx?action=refuseServiceOrder", data, function (json) {
+                if (json.Status == "OK") {
+                    alert_h("拒绝成功！", function () {
+                        this.window.location.href = "/Vshop/DistributorOrdersService.aspx";
+                    });
+                }
+            });
+        });
+    }
+
+</script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>

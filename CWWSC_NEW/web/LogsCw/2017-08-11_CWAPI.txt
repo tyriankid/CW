@@ -1,0 +1,2346 @@
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:49:36
+******定时器开始调用接口*******
+2017-8-11 16:49:36
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:49:36","OrderState":"Finish"}
+2017-8-11 16:49:36
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:49:37
+******定时器开始调用接口*******
+2017-8-11 16:49:37
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:49:37","OrderState":"Finish"}
+2017-8-11 16:49:37
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:49:37
+******定时器开始调用接口*******
+2017-8-11 16:49:37
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:49:37","OrderState":"Finish"}
+2017-8-11 16:49:37
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:49:38
+******定时器开始调用接口*******
+2017-8-11 16:49:38
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:49:38","OrderState":"Finish"}
+2017-8-11 16:49:38
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:49:38
+******定时器开始调用接口*******
+2017-8-11 16:49:38
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:49:38","OrderState":"Finish"}
+2017-8-11 16:49:38
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:49:38
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:50:38
+******定时器开始调用接口*******
+2017-8-11 16:50:38
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:50:38","OrderState":"Finish"}
+2017-8-11 16:50:38
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:50:38
+******定时器开始调用接口*******
+2017-8-11 16:50:38
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:50:38","OrderState":"Finish"}
+2017-8-11 16:50:38
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:50:38
+******定时器开始调用接口*******
+2017-8-11 16:50:39
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:50:39","OrderState":"Finish"}
+2017-8-11 16:50:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:50:39
+******定时器开始调用接口*******
+2017-8-11 16:50:39
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:50:39","OrderState":"Finish"}
+2017-8-11 16:50:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:50:39
+******定时器开始调用接口*******
+2017-8-11 16:50:39
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:50:39","OrderState":"Finish"}
+2017-8-11 16:50:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:50:39
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:51:39
+******定时器开始调用接口*******
+2017-8-11 16:51:39
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:51:39","OrderState":"Finish"}
+2017-8-11 16:51:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:51:39
+******定时器开始调用接口*******
+2017-8-11 16:51:39
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:51:39","OrderState":"Finish"}
+2017-8-11 16:51:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:51:39
+******定时器开始调用接口*******
+2017-8-11 16:51:39
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:51:39","OrderState":"Finish"}
+2017-8-11 16:51:39
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:51:40
+******定时器开始调用接口*******
+2017-8-11 16:51:40
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:51:40","OrderState":"Finish"}
+2017-8-11 16:51:40
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:51:40
+******定时器开始调用接口*******
+2017-8-11 16:51:40
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:51:40","OrderState":"Finish"}
+2017-8-11 16:51:40
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:51:40
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:52:40
+******定时器开始调用接口*******
+2017-8-11 16:52:40
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:52:40","OrderState":"Finish"}
+2017-8-11 16:52:40
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:52:40
+******定时器开始调用接口*******
+2017-8-11 16:52:40
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:52:40","OrderState":"Finish"}
+2017-8-11 16:52:40
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:52:40
+******定时器开始调用接口*******
+2017-8-11 16:52:40
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:52:40","OrderState":"Finish"}
+2017-8-11 16:52:40
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:52:40
+******定时器开始调用接口*******
+2017-8-11 16:52:41
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:52:41","OrderState":"Finish"}
+2017-8-11 16:52:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:52:41
+******定时器开始调用接口*******
+2017-8-11 16:52:41
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:52:41","OrderState":"Finish"}
+2017-8-11 16:52:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:52:41
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:53:41
+******定时器开始调用接口*******
+2017-8-11 16:53:41
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:53:41","OrderState":"Finish"}
+2017-8-11 16:53:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:53:41
+******定时器开始调用接口*******
+2017-8-11 16:53:41
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:53:41","OrderState":"Finish"}
+2017-8-11 16:53:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:53:41
+******定时器开始调用接口*******
+2017-8-11 16:53:41
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:53:41","OrderState":"Finish"}
+2017-8-11 16:53:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:53:41
+******定时器开始调用接口*******
+2017-8-11 16:53:41
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:53:41","OrderState":"Finish"}
+2017-8-11 16:53:41
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:53:42
+******定时器开始调用接口*******
+2017-8-11 16:53:42
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:53:42","OrderState":"Finish"}
+2017-8-11 16:53:42
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:53:42
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:54:42
+******定时器开始调用接口*******
+2017-8-11 16:54:42
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:54:42","OrderState":"Finish"}
+2017-8-11 16:54:42
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:54:42
+******定时器开始调用接口*******
+2017-8-11 16:54:42
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:54:42","OrderState":"Finish"}
+2017-8-11 16:54:42
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:54:42
+******定时器开始调用接口*******
+2017-8-11 16:54:42
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:54:42","OrderState":"Finish"}
+2017-8-11 16:54:42
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:54:42
+******定时器开始调用接口*******
+2017-8-11 16:54:42
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:54:42","OrderState":"Finish"}
+2017-8-11 16:54:42
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:54:42
+******定时器开始调用接口*******
+2017-8-11 16:54:42
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:54:43","OrderState":"Finish"}
+2017-8-11 16:54:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:54:43
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:55:43
+******定时器开始调用接口*******
+2017-8-11 16:55:43
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:55:43","OrderState":"Finish"}
+2017-8-11 16:55:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:55:43
+******定时器开始调用接口*******
+2017-8-11 16:55:43
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:55:43","OrderState":"Finish"}
+2017-8-11 16:55:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:55:43
+******定时器开始调用接口*******
+2017-8-11 16:55:43
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:55:43","OrderState":"Finish"}
+2017-8-11 16:55:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:55:43
+******定时器开始调用接口*******
+2017-8-11 16:55:43
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:55:43","OrderState":"Finish"}
+2017-8-11 16:55:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:55:43
+******定时器开始调用接口*******
+2017-8-11 16:55:43
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:55:43","OrderState":"Finish"}
+2017-8-11 16:55:43
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:55:44
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:56:44
+******定时器开始调用接口*******
+2017-8-11 16:56:44
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:56:44","OrderState":"Finish"}
+2017-8-11 16:56:44
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:56:44
+******定时器开始调用接口*******
+2017-8-11 16:56:44
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:56:44","OrderState":"Finish"}
+2017-8-11 16:56:44
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:56:44
+******定时器开始调用接口*******
+2017-8-11 16:56:44
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:56:44","OrderState":"Finish"}
+2017-8-11 16:56:44
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:56:53
+******定时器开始调用接口*******
+2017-8-11 16:56:53
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:56:53","OrderState":"Finish"}
+2017-8-11 16:56:53
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:56:53
+******定时器开始调用接口*******
+2017-8-11 16:56:53
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:56:53","OrderState":"Finish"}
+2017-8-11 16:56:53
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:56:54
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:57:54
+******定时器开始调用接口*******
+2017-8-11 16:57:54
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:57:54","OrderState":"Finish"}
+2017-8-11 16:57:54
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:57:54
+******定时器开始调用接口*******
+2017-8-11 16:57:54
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:57:54","OrderState":"Finish"}
+2017-8-11 16:57:54
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:57:54
+******定时器开始调用接口*******
+2017-8-11 16:57:54
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:57:54","OrderState":"Finish"}
+2017-8-11 16:57:54
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:57:54
+******定时器开始调用接口*******
+2017-8-11 16:57:54
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:57:54","OrderState":"Finish"}
+2017-8-11 16:57:54
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:57:54
+******定时器开始调用接口*******
+2017-8-11 16:57:55
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:57:55","OrderState":"Finish"}
+2017-8-11 16:57:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:57:55
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:58:55
+******定时器开始调用接口*******
+2017-8-11 16:58:55
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:58:55","OrderState":"Finish"}
+2017-8-11 16:58:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:58:55
+******定时器开始调用接口*******
+2017-8-11 16:58:55
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:58:55","OrderState":"Finish"}
+2017-8-11 16:58:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:58:55
+******定时器开始调用接口*******
+2017-8-11 16:58:55
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:58:55","OrderState":"Finish"}
+2017-8-11 16:58:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:58:55
+******定时器开始调用接口*******
+2017-8-11 16:58:55
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:58:55","OrderState":"Finish"}
+2017-8-11 16:58:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:58:55
+******定时器开始调用接口*******
+2017-8-11 16:58:55
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:58:55","OrderState":"Finish"}
+2017-8-11 16:58:55
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:58:56
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 16:59:56
+******定时器开始调用接口*******
+2017-8-11 16:59:56
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 16:59:56","OrderState":"Finish"}
+2017-8-11 16:59:56
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:59:56
+******定时器开始调用接口*******
+2017-8-11 16:59:56
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 16:59:56","OrderState":"Finish"}
+2017-8-11 16:59:56
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:59:56
+******定时器开始调用接口*******
+2017-8-11 16:59:56
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 16:59:56","OrderState":"Finish"}
+2017-8-11 16:59:56
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:59:56
+******定时器开始调用接口*******
+2017-8-11 16:59:56
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 16:59:56","OrderState":"Finish"}
+2017-8-11 16:59:56
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:59:56
+******定时器开始调用接口*******
+2017-8-11 16:59:56
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 16:59:56","OrderState":"Finish"}
+2017-8-11 16:59:56
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 16:59:56
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:00:56
+******定时器开始调用接口*******
+2017-8-11 17:00:57
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:00:57","OrderState":"Finish"}
+2017-8-11 17:00:57
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:00:57
+******定时器开始调用接口*******
+2017-8-11 17:00:57
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:00:57","OrderState":"Finish"}
+2017-8-11 17:00:57
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:00:57
+******定时器开始调用接口*******
+2017-8-11 17:00:57
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:00:57","OrderState":"Finish"}
+2017-8-11 17:00:57
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:00:57
+******定时器开始调用接口*******
+2017-8-11 17:00:57
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:00:57","OrderState":"Finish"}
+2017-8-11 17:00:57
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:00:57
+******定时器开始调用接口*******
+2017-8-11 17:00:57
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:00:57","OrderState":"Finish"}
+2017-8-11 17:00:57
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:00:57
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:01:57
+******定时器开始调用接口*******
+2017-8-11 17:01:58
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:01:58","OrderState":"Finish"}
+2017-8-11 17:01:58
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:01:58
+******定时器开始调用接口*******
+2017-8-11 17:01:58
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:01:58","OrderState":"Finish"}
+2017-8-11 17:01:58
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:01:58
+******定时器开始调用接口*******
+2017-8-11 17:01:58
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:01:58","OrderState":"Finish"}
+2017-8-11 17:01:58
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:01:58
+******定时器开始调用接口*******
+2017-8-11 17:01:58
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:01:58","OrderState":"Finish"}
+2017-8-11 17:01:58
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:01:58
+******定时器开始调用接口*******
+2017-8-11 17:01:58
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:01:58","OrderState":"Finish"}
+2017-8-11 17:01:58
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:01:59
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:02:59
+******定时器开始调用接口*******
+2017-8-11 17:02:59
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:02:59","OrderState":"Finish"}
+2017-8-11 17:02:59
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:02:59
+******定时器开始调用接口*******
+2017-8-11 17:02:59
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:02:59","OrderState":"Finish"}
+2017-8-11 17:02:59
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:03:08
+******定时器开始调用接口*******
+2017-8-11 17:03:08
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:03:08","OrderState":"Finish"}
+2017-8-11 17:03:08
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:03:08
+******定时器开始调用接口*******
+2017-8-11 17:03:08
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:03:08","OrderState":"Finish"}
+2017-8-11 17:03:08
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:03:08
+******定时器开始调用接口*******
+2017-8-11 17:03:08
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:03:09","OrderState":"Finish"}
+2017-8-11 17:03:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:03:09
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:04:09
+******定时器开始调用接口*******
+2017-8-11 17:04:09
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:04:09","OrderState":"Finish"}
+2017-8-11 17:04:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:04:09
+******定时器开始调用接口*******
+2017-8-11 17:04:09
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:04:09","OrderState":"Finish"}
+2017-8-11 17:04:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:04:09
+******定时器开始调用接口*******
+2017-8-11 17:04:09
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:04:09","OrderState":"Finish"}
+2017-8-11 17:04:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:04:09
+******定时器开始调用接口*******
+2017-8-11 17:04:09
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:04:09","OrderState":"Finish"}
+2017-8-11 17:04:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:04:09
+******定时器开始调用接口*******
+2017-8-11 17:04:09
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:04:09","OrderState":"Finish"}
+2017-8-11 17:04:09
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:04:10
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:05:10
+******定时器开始调用接口*******
+2017-8-11 17:05:10
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:05:10","OrderState":"Finish"}
+2017-8-11 17:05:10
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:05:10
+******定时器开始调用接口*******
+2017-8-11 17:05:10
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:05:10","OrderState":"Finish"}
+2017-8-11 17:05:10
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:05:10
+******定时器开始调用接口*******
+2017-8-11 17:05:10
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:05:10","OrderState":"Finish"}
+2017-8-11 17:05:10
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:05:10
+******定时器开始调用接口*******
+2017-8-11 17:05:10
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:05:10","OrderState":"Finish"}
+2017-8-11 17:05:10
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:05:10
+******定时器开始调用接口*******
+2017-8-11 17:05:10
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:05:10","OrderState":"Finish"}
+2017-8-11 17:05:10
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:05:10
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:06:11
+******定时器开始调用接口*******
+2017-8-11 17:06:11
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:06:11","OrderState":"Finish"}
+2017-8-11 17:06:11
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:06:11
+******定时器开始调用接口*******
+2017-8-11 17:06:11
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:06:11","OrderState":"Finish"}
+2017-8-11 17:06:11
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:06:11
+******定时器开始调用接口*******
+2017-8-11 17:06:11
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:06:11","OrderState":"Finish"}
+2017-8-11 17:06:11
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:06:11
+******定时器开始调用接口*******
+2017-8-11 17:06:11
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:06:11","OrderState":"Finish"}
+2017-8-11 17:06:11
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:06:11
+******定时器开始调用接口*******
+2017-8-11 17:06:11
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:06:11","OrderState":"Finish"}
+2017-8-11 17:06:11
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:06:11
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:07:11
+******定时器开始调用接口*******
+2017-8-11 17:07:12
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:07:12","OrderState":"Finish"}
+2017-8-11 17:07:12
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:07:12
+******定时器开始调用接口*******
+2017-8-11 17:07:12
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:07:12","OrderState":"Finish"}
+2017-8-11 17:07:12
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:07:12
+******定时器开始调用接口*******
+2017-8-11 17:07:12
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:07:12","OrderState":"Finish"}
+2017-8-11 17:07:12
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:07:12
+******定时器开始调用接口*******
+2017-8-11 17:07:12
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:07:12","OrderState":"Finish"}
+2017-8-11 17:07:12
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:07:12
+******定时器开始调用接口*******
+2017-8-11 17:07:12
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:07:12","OrderState":"Finish"}
+2017-8-11 17:07:12
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:07:12
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:08:12
+******定时器开始调用接口*******
+2017-8-11 17:08:13
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:08:13","OrderState":"Finish"}
+2017-8-11 17:08:13
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:08:13
+******定时器开始调用接口*******
+2017-8-11 17:08:13
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:08:13","OrderState":"Finish"}
+2017-8-11 17:08:13
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:08:13
+******定时器开始调用接口*******
+2017-8-11 17:08:13
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:08:13","OrderState":"Finish"}
+2017-8-11 17:08:13
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:08:13
+******定时器开始调用接口*******
+2017-8-11 17:08:13
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:08:13","OrderState":"Finish"}
+2017-8-11 17:08:13
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:08:13
+******定时器开始调用接口*******
+2017-8-11 17:08:13
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:08:13","OrderState":"Finish"}
+2017-8-11 17:08:13
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:08:13
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:09:14
+******定时器开始调用接口*******
+2017-8-11 17:09:14
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:09:14","OrderState":"Finish"}
+2017-8-11 17:09:14
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:09:14
+******定时器开始调用接口*******
+2017-8-11 17:09:14
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:09:14","OrderState":"Finish"}
+2017-8-11 17:09:14
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:09:14
+******定时器开始调用接口*******
+2017-8-11 17:09:14
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:09:14","OrderState":"Finish"}
+2017-8-11 17:09:14
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:09:14
+******定时器开始调用接口*******
+2017-8-11 17:09:14
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:09:14","OrderState":"Finish"}
+2017-8-11 17:09:14
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:09:14
+******定时器开始调用接口*******
+2017-8-11 17:09:14
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:09:14","OrderState":"Finish"}
+2017-8-11 17:09:14
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:09:15
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:10:15
+******定时器开始调用接口*******
+2017-8-11 17:10:15
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:10:15","OrderState":"Finish"}
+2017-8-11 17:10:15
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:10:15
+******定时器开始调用接口*******
+2017-8-11 17:10:15
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:10:15","OrderState":"Finish"}
+2017-8-11 17:10:15
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:10:15
+******定时器开始调用接口*******
+2017-8-11 17:10:15
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:10:15","OrderState":"Finish"}
+2017-8-11 17:10:15
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:10:15
+******定时器开始调用接口*******
+2017-8-11 17:10:15
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:10:15","OrderState":"Finish"}
+2017-8-11 17:10:15
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:10:15
+******定时器开始调用接口*******
+2017-8-11 17:10:15
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:10:15","OrderState":"Finish"}
+2017-8-11 17:10:15
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:10:16
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:11:16
+******定时器开始调用接口*******
+2017-8-11 17:11:16
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:11:16","OrderState":"Finish"}
+2017-8-11 17:11:16
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:11:16
+******定时器开始调用接口*******
+2017-8-11 17:11:16
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:11:16","OrderState":"Finish"}
+2017-8-11 17:11:16
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:11:16
+******定时器开始调用接口*******
+2017-8-11 17:11:16
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:11:16","OrderState":"Finish"}
+2017-8-11 17:11:16
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:11:16
+******定时器开始调用接口*******
+2017-8-11 17:11:16
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:11:16","OrderState":"Finish"}
+2017-8-11 17:11:16
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:11:16
+******定时器开始调用接口*******
+2017-8-11 17:11:16
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:11:16","OrderState":"Finish"}
+2017-8-11 17:11:16
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:11:17
+**********定时器进入判断是否存在过期并已经发货的订单*******
+2017-8-11 17:12:17
+******定时器开始调用接口*******
+2017-8-11 17:12:17
+******发送的内容：{"OrderNo":"201612081595153","Date":"2017-8-11 17:12:17","OrderState":"Finish"}
+2017-8-11 17:12:17
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:12:17
+******定时器开始调用接口*******
+2017-8-11 17:12:17
+******发送的内容：{"OrderNo":"201612086629592","Date":"2017-8-11 17:12:17","OrderState":"Finish"}
+2017-8-11 17:12:17
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:12:17
+******定时器开始调用接口*******
+2017-8-11 17:12:17
+******发送的内容：{"OrderNo":"201612093362989","Date":"2017-8-11 17:12:17","OrderState":"Finish"}
+2017-8-11 17:12:17
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:12:17
+******定时器开始调用接口*******
+2017-8-11 17:12:17
+******发送的内容：{"OrderNo":"201612160814987","Date":"2017-8-11 17:12:17","OrderState":"Finish"}
+2017-8-11 17:12:17
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:12:17
+******定时器开始调用接口*******
+2017-8-11 17:12:17
+******发送的内容：{"OrderNo":"201612166650346","Date":"2017-8-11 17:12:17","OrderState":"Finish"}
+2017-8-11 17:12:17
+******订单完成接口对接发生错误，原因：System.ServiceModel.FaultException: No such operation 'MPFTOJL_DHD_QS'
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJL.MPFTOJL_DHD_QS(String JSONXML)
+   在 Hidistro.Jobs.AllHereServiceReferenceJob.MPFTOJLClient.MPFTOJL_DHD_QS(String JSONXML) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\Service References\AllHereServiceReferenceJob\Reference.cs:行号 98
+   在 Hidistro.Jobs.OrderJob.Execute(XmlNode node) 位置 C:\Users\Administrator\OneDrive\CW\CWWSC_NEW\Hidistro.Jobs\OrderJob.cs:行号 64
+2017-8-11 17:12:17

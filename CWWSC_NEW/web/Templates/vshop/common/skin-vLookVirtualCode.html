@@ -1,0 +1,56 @@
+﻿<hi:common_header runat="server" />
+<style>
+    .offline-help div {overflow: hidden;}
+    .offline-help p{
+        margin-bottom:0.3rem;
+    }
+    @media screen and (min-width: 375px) {
+        .offline-help p{
+            font-size: 1.3rem;
+        }
+    }
+</style>
+<div class="pbox">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                订单卡号信息</h3>
+        </div>
+        <div class="panel-body offline-help">
+            <div>
+                <p id="p1"><asp:literal runat="server" id="Literal1" /></p></div>
+            <div>
+                <p id="p2"><asp:literal runat="server" id="Literal2" /></p></div>
+            <div>
+                <p id="P3"><asp:literal runat="server" id="Literal3" /></p></div>
+            <div>
+                <p id="P4"><asp:literal runat="server" id="Literal4" /></p></div>
+            <div>
+                <p id="P5"><asp:literal runat="server" id="Literal5" /></p></div>
+            <div>
+                <p id="P6"><asp:literal runat="server" id="Literal6" /></p></div>
+            <div>
+                <p id="P7"><asp:literal runat="server" id="Literal7" /></p></div>
+            <div>
+                <p id="P8"><asp:literal runat="server" id="Literal8" /></p></div>
+            <div>
+                <p id="P9"><asp:literal runat="server" id="Literal9" /></p></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    //隐藏右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+
+    //隐藏底部菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+<script type="text/javascript">
+
+</script>
+<hi:common_footer runat="server" />

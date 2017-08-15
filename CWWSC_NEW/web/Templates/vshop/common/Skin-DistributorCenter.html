@@ -1,0 +1,239 @@
+﻿<hi:common_header runat="server"/>
+<style>
+     body {background: #dddddd !important; }
+    .order-img-tags {margin:0;float: left;}
+    .listo1 {overflow: hidden;margin-top: 10px;}
+    .listo2,.listo3{height: 40px;overflow: hidden;}
+    .order-img-tags li a span {color:#525252;}
+</style>
+<div class="home-head distributor-head distributorCenter ">
+    <div class="shop-photo">
+        <a href="DistributorInfo.aspx"><hi:hiimage runat="server" id="imglogo" cssclass="img-circle" imageurl="/Utility/pics/headLogo.jpg" /></a>
+        <!--<span><asp:Image ID="imgGrade" runat="server" Width="20" Height="20"/></span>-->
+    </div>
+
+    <div class="shop-user-name">
+        <a href="DistributorInfo.aspx"><asp:Literal ID="litStroeName" runat="server"></asp:Literal><span id="num_joinTime">加入时间：</span></a>
+    </div>
+
+	<div class="info">
+       <div class="title"style="width: 200px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; margin-bottom: 2px;"></div>
+        <div class="presentExp font-s">
+            
+        </div>
+    </div> 
+    <div class="tixian-box">
+        <p><span>可提现金额（元）</span><a class="tixian-mx" href="CommissionDetails.aspx">查看明细</a></p>
+        <p class="tixian-mney">
+            <em><Hi:FormatedMoneyLabel ID="lblsurpluscommission" runat="server" NullToDisplay="0.00"></Hi:FormatedMoneyLabel></em>
+            <!--<a class="tixian-btn"   href="RequestCommissions.aspx" >提现</a></p>        -->    
+            <asp:HyperLink ID="hyrequest" runat="server" NavigateUrl="RequestCommissions.aspx" Text="提现" CssClass="tixian-btn" ></asp:HyperLink>
+    </div>
+    <ul class="order-money">
+        <li>
+            <a href="javascript:;">订单总额<i>￥<Hi:FormatedMoneyLabel ID="saletotal" runat="server" NullToDisplay="0.00"></Hi:FormatedMoneyLabel></i></a>
+        </li>
+        <li class="yellow">
+            <a href="javascript:;">今日佣金<i>￥<Hi:FormatedMoneyLabel ID="refrraltotal" runat="server"  NullToDisplay="0.00"></Hi:FormatedMoneyLabel></i></a>
+        </li>
+        <li class="blue">
+            <a href="javascript:;">今日订单<i><asp:Literal ID="litTodayOrdersNum" runat="server" Text="0"></asp:Literal></i></a>
+        </li>
+    </ul>
+</div>
+<!--隐藏域,存放页面数字信息-->
+<input type="hidden" runat="server" id="val_isAgent"><!--当前门店关联的用户-->
+<input type="hidden" runat="server" id="val_joinTime" /><!--加入时间-->
+<input type="hidden" runat="server" id="val_MyCommission" /><!--我的佣金金额-->
+<input type="hidden" runat="server" id="val_MyChirldrenDistributors" /><!--我的下属数量-->
+<input type="hidden" runat="server" id="val_MyDistributorOrders" /><!--店铺订单数量-->
+<input type="hidden" runat="server" id="val_MyDistributorOrdersService" /><!--店铺服务订单数量-->
+<input type="hidden" runat="server" id="val_MyProducts" /><!--店铺商品-->
+<input type="hidden" runat="server" id="val_MyVisitCount" /><!--粉丝数量-->
+<input type="hidden" runat="server" id="val_MyUserCount" /><!--门店用户-->
+<input type="hidden" runat="server" id="val_MyBindAddress" /><!--是否显示设置绑定位置，店长允许，店员不允许-->
+<!--数字信息隐藏域end-->
+
+<!--隐藏域,存放文字信息(对不同用户展示不同的定义信息)-->
+<input type="hidden" runat="server" id="name_MyCommission"><!--我的佣金-->
+<input type="hidden" runat="server" id="name_MyChirldrenDistributors" /><!--我的下属-->
+<input type="hidden" id="specialHideShow" runat="server" clientidmode="Static" />
+<!--文字信息隐藏域end-->
+
+<ul class="order-img-tags listo1">
+    <li class="titleLi1" style="height:40px;background: #ffffff url(../images/topArr.png) no-repeat 94% center;background-size:14px;font-size: 1.4rem;"><span style="height: 40px;line-height:40px;margin-left: 20px;display: inline-block;">店铺信息</span></li>
+    <li id="MyProducts"><a class="shop-brokerage" href="MyProducts.aspx">
+        <div id="txt_MyProducts">店铺商品</div>
+        <span><!--<i id="num_MyProducts">0</i>-->我上架的商品</span></a>
+    </li>
+    <li id="MyDsUsers"><a class="shop-sales" href="StoreRuleList.aspx">
+        <div id="txt_MyDsUsers">店员管理</div>
+        <span>店员信息</span></a>
+    </li>
+     <li id="MyUserCount">
+        <a class="shop-underorder" href="MemberTransition.aspx">
+            <div id="txt_MyUserCount">店铺用户</div>
+            <span >微会员、金力会员、粘性会员<i id="num_MyUserCount" style="display:none"></i></span>
+        </a>
+    </li>
+    <li id="MyCommission"><a class="shop-info" href="DistributorCommission.aspx">
+        <div id="txt_MyCommission"> 店铺佣金</div>
+        <span><i id="num_MyCommission">0.00</i>元</span></a>
+    </li>
+    <li id="MyRanking">
+        <a class="shop-top" href="MyRanking.aspx">
+            <div id="div1MyRanking">店铺排名</div>
+            <span>销售统计</span>
+        </a>
+    </li>
+    <li id="StoreUserChange">
+        <a class="shop-service" href="StoreUserChange.aspx">
+            <div id="txt_StoreUserChange">店长申请</div>
+            <span>申请成为店长</span>
+        </a>
+    </li>
+    <li id="MyServiceClass">
+        <a class="shop-service" href="ServiceApply.aspx">
+            <div id="txt_MyServiceClass">服务门店</div>
+            <span>申请服务门店</span>
+        </a>
+    </li>
+    <li id="MyBindAddress">
+        <a class="shop-location" href="DistributorLocation.aspx">
+            <div id="txt_MyBindAddress">门店定位</div>
+            <span>默认当前位置需要打开手机GPS</span>
+        </a>
+    </li>
+</ul>
+<ul class="order-img-tags listo2">
+    <li class="titleLi2" style="height:40px;background: #ffffff url(../images/bottomArr.png) no-repeat 94% center;background-size:14px;font-size: 1.4rem;"><span style="height: 40px;line-height:40px;margin-left: 20px;display: inline-block;">我的订单</span></li>
+    <!--我的佣金-->
+    <!--<li id="MyChirldrenDistributors"><a href="ChirldrenDistributors.aspx" class="shop-underling">
+        <div id="txt_MyChirldrenDistributors">我的下属</div>
+        <span><i id="num_MyChirldrenDistributors">0</i>个伙伴</span></a>
+    </li>-->
+    <li id="MyDistributorOrders"><a class="shop-order" href="DistributorOrders.aspx">
+        <div id="txt_MyDistributorOrders">店铺订单</div>
+        <span><i id="num_MyDistributorOrders">0</i>个订单</span></a>
+    </li>
+    <li id="Li1"><a class="shop-order1" href="DistributorOrdersService.aspx">
+        <div id="Div1">服务订单</div>
+        <span><i id="num_MyDistributorOrdersService">0</i>个订单</span></a>
+    </li>
+    <!--<li id="Li1"><a class="shop-no">更多</a></li>-->
+</ul>
+<ul class="order-img-tags listo3" style="margin-bottom:54px;">
+    <li class="titleLi3" style="height:40px;background: #ffffff url(../images/bottomArr.png) no-repeat 94% center;background-size:14px;font-size: 1.4rem;"><span style="height: 40px;line-height:40px;margin-left: 20px;display: inline-block;">推广营销</span></li>
+    <li id="MyQRcode"><a href="QRcode.aspx" class="shop-qr">
+        <div id="txt_MyQRcode">店铺推广码</div>
+        <span>推广二维码</span></a>
+    </li>
+     <li id="MyCircle"><a class="shop-friend" href="FriendsCircle.aspx">
+        <div id="txt_MyCircle">朋友圈素材</div>
+        <span>推广素材</span></a>
+    </li>
+<!--    <li id="MyNameCard"><a class="shop-card" href="NameCard.aspx">
+        <div id="txt_MyNameCard">店长名片</div>
+        <span>店长信息</span></a>
+    </li>-->
+    <li id="MyVisitCount"><a class="shop-visit" href="Statistics.aspx">
+        <div id="txt_MyVisitCount">统计信息</div>
+        <span><i id="num_MyVisitCount">0</i>次点击</span></a>
+    </li>
+    <!--<li id="MyUnderOrder"><a class="shop-underorder" href="UnderOrders.aspx">
+        <div id="txt_MyUnderOrder">下属订单</div>
+        <span><i id="num_MyUnderOrder">0</i>个订单</span></a>
+    </li>-->
+    <li id="MyConsult">
+        <a class="shop-underling" href="MyConsult.aspx">
+            <div id="div1MyConsult">商品咨询</div>
+            <span>用户咨询</span>
+        </a>
+    </li>
+</ul>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+    //取得lblsurpluscommission控件的值
+    $(document).ready(function () {
+        $("#vDistributorCenter_lblsurpluscommission").click(function () {
+            if($("#vDistributorCenter_lblsurpluscommission").html());
+        });
+    });
+    //控件值大于0就显示其他样式
+    if (parseInt($("#vDistributorCenter_lblsurpluscommission").html()) > 0) {
+        $(".tixian-btn").removeClass().addClass("withdraw-btn");
+    }
+    $(function(){
+        $(".distributorCenter .shop-photo").css({ "left": ($(".distributorCenter").width() - $(".distributorCenter .shop-photo").width()) / 2 + "px" });
+        bindData();
+    });
+    //数字信息的绑定
+    function bindData() {
+        //从隐藏域取值
+        var usercount = $("#vDistributorCenter_val_MyUserCount").val();
+        var commission = $("#vDistributorCenter_val_MyCommission").val();
+        var chirldrenDistributors = $("#vDistributorCenter_val_MyChirldrenDistributors").val();
+        var distributorOrders = $("#vDistributorCenter_val_MyDistributorOrders").val();
+        var distributorOrdersService = $("#vDistributorCenter_val_MyDistributorOrdersService").val();
+        var visitCount = $("#vDistributorCenter_val_MyVisitCount").val();
+        //var isAgent = $("#vDistributorCenter_val_isAgent").val() == 1;
+        var joinTime = $("#vDistributorCenter_val_joinTime").val();
+        //填值
+        $("#num_MyCommission").html(commission);
+        $("#num_MyChirldrenDistributors").html(chirldrenDistributors);
+        $("#num_MyDistributorOrders").html(distributorOrders);
+        $("#num_MyDistributorOrdersService").html(distributorOrdersService);//服务订单数
+        $("#num_MyVisitCount").html(visitCount);
+        $("#num_MyUserCount").html(usercount);
+        $("#num_joinTime").html("加入时间：" + joinTime);
+
+        //如果不是店长则隐藏设置位置项
+        if ($("#vDistributorCenter_val_MyBindAddress").val() != null && $("#vDistributorCenter_val_MyBindAddress").val() == "false") {
+            $("#MyBindAddress").hide();
+            $("#MyDsUsers").hide();
+            $("#MyNameCard").hide();
+        } else {
+            $("#StoreUserChange").hide();
+        }
+    };
+    var heightNum1 = 1;
+    var heightNum2 = 1;
+    var heightNum3 = 1;
+    var height1 =  ($(".listo1").find("li").length -1) * 50 + 40 + "px";
+    var height2 =  ($(".listo2").find("li").length - 1) * 50 + 40 + "px";
+    var height3 =  ($(".listo3").find("li").length - 1) * 50 + 40 + "px";
+    $(".listo1").click(function () {
+        heightNum1++;
+        if (heightNum1 % 2 == 0) {
+            $(this).animate({ "height": "40px" });
+            $(".titleLi1").css({ "background": " #ffffff url(../images/bottomArr.png) no-repeat 94% center","backgroundSize":"14px" });
+        } else {
+            $(this).animate({ "height": height1 });
+            $(".titleLi1").css({ "background": " #ffffff url(../images/topArr.png) no-repeat 94% center", "backgroundSize": "14px" });
+        }
+    });
+    $(".listo2").click(function () {
+        heightNum2++;
+        if (heightNum2 % 2 == 0) {
+            $(this).animate({ "height": height2 });
+            $(".titleLi2").css({ "background": " #ffffff url(../images/topArr.png) no-repeat 94% center", "backgroundSize": "14px" });
+        } else {
+            $(this).animate({ "height": "40px" });
+            $(".titleLi2").css({ "background": " #ffffff url(../images/bottomArr.png) no-repeat 94% center", "backgroundSize": "14px" });
+        }
+    });
+    $(".listo3").click(function () {
+        heightNum3++;
+        if (heightNum3 % 2 == 0) {
+            $(this).animate({ "height": height3 });
+            $(".titleLi3").css({ "background": " #ffffff url(../images/topArr.png) no-repeat 94% center", "backgroundSize": "14px" });
+        } else {
+            $(this).animate({ "height": "40px" });
+            $(".titleLi3").css({ "background": " #ffffff url(../images/bottomArr.png) no-repeat 94% center", "backgroundSize": "14px" });
+        }
+    });
+</script>
+<Hi:Common_Footer runat="server" />

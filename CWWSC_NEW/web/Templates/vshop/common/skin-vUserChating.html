@@ -1,0 +1,87 @@
+﻿<hi:common_header runat="server" />
+<style>
+     .goods-box img {
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        position:absolute;
+        top:14px;
+    }
+  .goods-box .info{
+            min-height:50px;
+            padding-left:60px;
+        margin:0;
+        }
+
+    .ask-box,.pbox {padding:0;}
+   .goods-box .name{height: 30px;line-height:30px;font-size:14px;}
+    .ask-box .goods-box{margin-bottom:0;}
+   .ask-box .goods-box:last-child{padding-bottom:0;}
+   .goods-box .price {
+       height:30px;
+      line-height:30px;
+        font-size:12px;
+        padding: 0;
+    }
+    .ly {
+        width:80%;
+        display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+        float:left;color:#c1BBBB;
+    }
+</style>
+<div class="pbox" id="productListContainer">
+    <div class="ask-box">
+        <div id="consulationsList">
+            <hi:vshoptemplatedrepeater id="rptDialogList" templatefile="/Tags/skin-Common_UserDialogList.ascx" runat="server" />
+        </div>
+        <div id="pager">  </div>
+    </div>
+</div>
+<input type="hidden" clientidmode="Static" value="" runat="server" id="txtTotal" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentUserId" />
+<input type="hidden" clientidmode="Static" value="" runat="server" id="currentDomain" />
+
+<script src="/Utility/common.js" type="text/javascript"></script>
+<script src="/Utility/pager.js" type="text/javascript"></script>
+<script src="../script/dpt.js" type="text/javascript"></script>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<script type="text/javascript">
+    String.prototype.queryString = function (name) {
+        var reg = new RegExp("[\?\&]" + name + "=([^\&]+)", "i"), r = this.match(reg);
+        return r !== null ? unescape(r[1]) : null;
+    };
+    window.onload = function () {
+        var last = location.href.queryString("_v");
+        //document.body.innerHTML += last || "";
+        if (location.href.indexOf("?") == -1) {
+            location.href = location.href + "?_v=" + (new Date().getTime());
+        } else {
+            var now = new Date().getTime();
+            if (!last) {
+                location.href = location.href + "&_v=" + (new Date().getTime());
+            } else if (parseInt(last) < (now - 1000)) {
+                location.href = location.href.replace("_v=" + last, "_v=" + (new Date().getTime()));
+            }
+        }
+    };
+    $(function () {
+        $("[role='chatUser']").each(function () {
+            var currentDomain = $("#currentDomain").val();
+            var locationstr = currentDomain + ":3000/userchat.html?k=";
+            var attrStr;
+            if ($("#currentUserId").val() == $(this).attr("FQUserId")) {
+                attrStr = getChatAttrs($(this).attr("FQUserId"), $(this).attr("JSUserId"));
+            } else {
+                attrStr = getChatAttrs($(this).attr("JSUserId"), $(this).attr("FQUserId"));
+            }
+            $(this).attr("href", locationstr + escape(attrStr));
+        });
+
+    });
+</script>
+<Hi:Common_Footer runat="server" />

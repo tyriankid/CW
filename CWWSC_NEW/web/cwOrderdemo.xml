@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SynSaleOrder>
+  <OrderCustormer>
+    <ReceivName>陈阳</ReceivName>
+    <ReceivTel>13886711465</ReceivTel>
+    <ReceivPhone></ReceivPhone>
+    <ReceivProvice>42</ReceivProvice>
+    <ReceivCity>4205</ReceivCity>
+    <ReceivArea>420505</ReceivArea>
+    <ReceivAddress>金岭路54号</ReceivAddress>
+  </OrderCustormer>
+  <OrderTax>
+    <TaxType>0</TaxType>
+    <TaxName>刘辉</TaxName>
+  </OrderTax>
+  <OrderMain>
+    <OrderId>8893</OrderId>
+    <OrderNo>Z1607271108079315u</OrderNo>
+    <OrderTime>1469588887</OrderTime>
+    <ORDERNO_DJ></ORDERNO_DJ>
+    <FVALUE_DJ></FVALUE_DJ>
+    <FValue>1499.00</FValue>
+    <ReValue>1499.00</ReValue>
+    <OrderNote></OrderNote>
+    <DelivCode>47</DelivCode>
+    <Freight>0.00</Freight>
+    <AdjustedDiscount>0</AdjustedDiscount>
+    <DelivName>顺丰</DelivName>
+    <OrderDesc>DZ160159</OrderDesc>
+  </OrderMain>
+  <OrderPay>
+    <OrderPayTime>2016-07-29 00:58:46</OrderPayTime>
+    <OrderPayNote> 支付类型：支付宝 流水号：2016072921001004740288880715</OrderPayNote>
+    <OrderPayment>alipayinstant</OrderPayment>
+    <OrderPayName>支付宝</OrderPayName>
+    <OrderPayValue>1499.00</OrderPayValue>
+  </OrderPay>
+  <Details>
+    <OrderDetail>
+      <GoodsCode>64088</GoodsCode>
+      <OrderQuantity>1</OrderQuantity>
+      <OrderFprice>1499.00</OrderFprice>
+      <OrderRePrice>1499</OrderRePrice>
+    </OrderDetail>
+  </Details>
+</SynSaleOrder>
+
+

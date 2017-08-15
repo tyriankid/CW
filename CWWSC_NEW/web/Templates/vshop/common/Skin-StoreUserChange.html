@@ -1,0 +1,73 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {
+        background:#ffffff;
+    }
+    .yongjin-box {
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        margin: auto;
+        height:8rem;
+        text-align:center;
+    }
+        .yongjin-box  p {
+            font-size:16px;
+            margin-bottom:0.8rem;
+        }
+        .yongjin-box input {
+            width: 100%;
+            height: 2.8rem;
+            position: fixed;
+            bottom: 48px;
+            left: 0;
+            background: #f90;
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+</style>
+<div class="yongjin-box">
+        <p>我是一个店长</p>
+        <p>我是一个店长</p>
+        <p>我是一个店长</p>
+    <input type="button" id="btnApply" runat="server" value="申请成为店长" onserverclick="btnApply_Click" clientidmode="static"/>
+    <input type="hidden" id="hidApplyUserId" runat="server" clientidmode="static"/>
+    <input type="hidden" id="hidApplyStoreId" runat="server" clientidmode="static" />
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        if ($("#btnApply").val() == "审核中..") {
+            $("#btnApply").css("background", "grey");
+        }
+    });
+
+
+    $("#btnApply").click(function () {
+
+        myConfirm('询问', '确认要提交成为店长的申请吗？', '确定申请', function () {
+            $.ajax({
+                url: "/api/ServiceClassHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 1000,
+                data: { action: "ApplyStore", applyUserId: $("#hidApplyUserId").val(), applyStoreId: $("#hidApplyStoreId").val() },
+                dataType: "json",
+                success: function (data) {
+                    if (data.success) {
+                        alert_h(data.msg, function () {
+                            window.location.reload();
+                        });
+                        return;
+                    }
+                    else {
+                        alert_h(data.msg);
+                        return;
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<hi:common_footer runat="server" />

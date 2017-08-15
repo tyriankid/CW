@@ -1,0 +1,8 @@
+{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:11:00","content":"asd "}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:11:00","content":"asd "}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:15:22","content":"double?"}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:15:58","content":"我做的即时聊天系统,嵌套到微信商城里的"}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:16:39","content":"挖哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:16:41","content":"就等你说这句话"}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:18:22","content":"嗯表情后面在扩展,先做核心"}
+,{"roomid":null,"userid":-1,"sendtime":"2017-07-27 15:19:51","content":"哎哟,突然想发表情了发现发不了的感觉好蛋疼!"}

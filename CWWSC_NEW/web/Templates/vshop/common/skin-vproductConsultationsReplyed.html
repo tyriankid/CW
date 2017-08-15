@@ -1,0 +1,66 @@
+﻿<hi:common_header runat="server" />
+
+    <a id="productImage">
+        <div class="well goods-box clearfix" style="padding:10px;">
+            <img runat="server" id="imgProductImage">
+            <div class="info">
+                <div class="name font-l">
+                    <asp:literal runat="server" id="litProductTitle" /></div>
+                <!--<div class="intro font-m text-muted">
+                    <asp:literal runat="server" id="litShortDescription" /></div>-->
+                <div class="price text-danger">
+                    ¥<asp:literal runat="server" id="litSalePrice" /><span class="sales font-s text-muted">已售<b><asp:literal runat="server" id="litSoldCount" /></b>件</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="ask-answer">
+        <p>咨询用户：<asp:literal runat="server" id="litUserName" /></p>
+        <p class="ask"><asp:literal runat="server" id="litConsultationText" /></p>
+        <div class="dateTime font-s text-muted" style="text-align:right">
+            提问时间：<asp:literal runat="server" id="litConsultationDate" />
+        </div>
+    </div>
+   <div class="pbox"> 
+    <textarea id="consultation" class="form-control" rows="5" placeholder="请填写您对该咨询的回答"></textarea>
+    <button type="button" onclick="Submit()" class="btn btn-danger btn-block">
+        提交回答</button>
+</div>
+<input type="hidden" clientidmode="Static" value="" runat="server" id="txtTotal" />
+<script src="/Utility/common.js" type="text/javascript"></script>
+<script src="/Utility/pager.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //提交回答
+    function Submit() {
+        if ($("#consultation").val() == "") {
+            alert_h("必须填写回答内容");
+            return;
+        }
+        
+        var consultationId = getParam('consultationId');
+        var data = {};
+        data.ConsultationId = consultationId;
+        data.ReplyText = $("#consultation").val();
+
+        $.post("/api/VshopProcess.ashx?action=ProductConsultationsReplyed", data, function (json) {
+            if (json.success === true) {
+                alert_h("提交成功", function () {
+                    window.location = "/Vshop/MyConsult.aspx";
+                 //location.reload();
+                });
+            }
+            else {
+                alert_h(json.msg);
+            }
+        });
+    }
+
+    //设置商品链接
+    $(function () {
+        $('#productImage').attr('href', '/vshop/productDetails.aspx?productId=' + getParam('ProductId'));
+    });
+
+
+</script>
+
+<hi:common_footer runat="server" />

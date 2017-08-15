@@ -1,0 +1,84 @@
+﻿<hi:common_header runat="server" />
+  <ul class="clearfix  orders-title memberorders-title  title_bg">
+        <li class=""><a href="?status=0">全部订单</a></li>
+        <li><a href="?status=3">待出工</a></li>
+        <li><a href="?status=5">已完成</a></li>
+      </ul>
+
+
+<div id="divorderlist">
+    <hi:vshoptemplatedrepeater id="rptOrders" templatefile="/Tags/skin-Common_MemberCenterOrdersService.ascx" runat="server" />
+</div>
+<script>
+    //禁用右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+</script>
+<p id="divEmpty" class="text-center list-empty hide">
+    <span class="glyphicon glyphicon-list-alt" style="margin-left: -3px;"></span><em>订单列表为空</em>
+</p>
+ <div  class="iframeBox" style =" width:100%; height:100%;background:rgba(0,0,0,0.6); overflow:hidden;position: fixed;top: 0;left: 0;bottom:0;right: 0;margin: auto; z-index: 99999;display:none;">
+            <div  style="width:100%; height:100%;" >
+                   <iframe style="width:100%; height:100%;border: none;"  >
+                   </iframe>
+             </div>
+    </div>
+<script type="text/javascript">
+   
+    function FinishOrder(orderId) {
+        var data = {};
+        data.orderId = orderId;
+        myConfirm('询问', '您确定已经收到货物了吗？', '确定收货', function () {
+            //确认收货
+            //$.post("/api/VshopProcess.ashx?action=ConfirmTakeGoodsOrder", data, function (json) {
+            //    if (json.success === true) {
+            //        alert_h('确认收货成功！', function () {
+            //              $(".iframeBox").show(300).find("iframe").attr("src", "CommodityReview.aspx");
+            //        });
+            //    }
+            //    else {
+            //        alert_h(json.msg);
+            //    }
+            //});
+
+        });
+    }
+    function CloseOrder(orderId) {
+        var data = {};
+        data.orderId = orderId;
+        myConfirm('询问', '您确定要关闭订单吗？', '关闭订单', function () {
+            $.post("/api/VshopProcess.ashx?action=CloseOrder", data, function (json) {
+                if (json.success === true) {
+                    alert_h('关闭订单成功！', function () {
+                        location.reload();
+                    });
+                }
+                else {
+                    alert_h(json.msg);
+                }
+            });
+        });
+    }
+
+    $(function () {
+        if (!$.trim($("#divorderlist").html())) {
+            $("#divorderlist").hide();
+            $("#divEmpty").removeClass('hide');
+        }
+
+        var list_h = (document.documentElement.clientHeight - 49 - $('.list-empty').height()) * .5 + 'px';
+        $('.list-empty').css('margin-top', list_h);
+        var status = getParam('status');
+        if (status == "0") {
+            $(".title_bg li").removeClass("activenum").eq(0).addClass("activenum");
+        } else if (status == "5") {
+            $(".title_bg li").removeClass("activenum").eq(2).addClass("activenum");
+        } else if (status == "3") {
+            $(".title_bg li").removeClass("activenum").eq(1).addClass("activenum");
+        }
+
+    })
+</script>
+
+<hi:common_footer runat="server" />

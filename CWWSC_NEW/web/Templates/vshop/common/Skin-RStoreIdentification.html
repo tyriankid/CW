@@ -1,0 +1,161 @@
+﻿<hi:common_header runat="server" />
+<style>
+    ul.memberorders-title li{
+        width:50%;
+    }
+     ul.memberorders-title .rzActive{
+       border-bottom: 2px solid #F60;    
+    }
+
+    input {
+        outline:none;
+        border:1px solid #ccc;
+        height: 34px;
+        border-radius:4px;
+        width:100%;
+        color:black;
+        text-indent:0.8em;
+    }
+       ::-webkit-input-placeholder{
+         color: #a3a3a3;
+        font-size: 1.4rem;
+}
+    #RStoreIdentification_MdName{
+        margin-bottom:0.6rem;
+    }
+    .description {
+        font-family:'Microsoft YaHei';
+    }
+     .InpBox{
+        padding: 0 10px !important;
+    }
+    .InpBox dt{
+        width: 35% !important;
+    }
+    .InpBox dd{
+        width:100% !important;
+    }
+    #RStoreIdentification_FgsName {
+        border:none;
+    }
+    .description h1{
+        margin:15px 0;
+    }
+      #RStoreIdentification_FgsName {
+        outline: none;
+        border: 1px solid #ccc;
+        height: 34px;
+        border-radius: 4px;
+        width: 100%;
+        color:rgb(163, 163, 165);
+        text-indent: 0.5em;
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+        padding: 0rem 0%;
+    }
+  .InpBox dd select{
+    /*padding: .5rem 5%;*/
+}
+</style>
+<link href="../style/storeInfo.css" rel="stylesheet" />
+  <ul class="clearfix  orders-title memberorders-title  title_bg" style="display:none">
+        <li class="rzActive"><a href="/Vshop/StoreIdentification.aspx">店长认证</a></li>
+        <li><a href="/Vshop/ClerkAuthentication.aspx">店员认证</a></li>
+      </ul>
+<div class="">
+        <div class=""><img src="/images/storeInfo.jpg" width="100%" /></div>
+    <div class="description">
+        <h1><span>门店认证</span></h1>
+        <form runat="server">
+        <table>
+            <dl class="InpBox clearfix">
+                <dd><asp:DropDownList ID="FgsName" runat="server" ></asp:DropDownList></dd>
+            </dl>
+            <dl class="InpBox clearfix">
+                   <asp:TextBox class="text" ID="MdName" runat="server" placeholder="店长姓名"></asp:TextBox>
+            </dl>
+            <dl class="InpBox clearfix">
+                <asp:TextBox ID="JiNum" runat="server" class="text"  placeholder="ALLHERE账号"></asp:TextBox>
+            </dl>
+        </table>
+            <div class="submitBox">
+             <input type="button" id="rzbtn" class="btn-submit" value="店长认证"  onclick="javascript: rzbtn_click()" />
+            </div>
+            <!--
+            <div class="submitBox">
+             <input type="button" id="dybtn" value="店员认证"  onclick="javascript: dybtn_click()" />
+            </div>-->
+
+        </form>
+        <div style="text-align:center; color:#f60;">
+            <br />
+            <span>提示：亲，此认证只针对创维O2O直营店店长</span>
+        </div>
+        <asp:literal id="litApplicationDescription" runat="server"></asp:literal>
+    </div>
+</div>
+        <asp:literal id="customInputs" runat="server"></asp:literal>
+
+<script type="text/javascript" >
+    //跳转到店员认证
+    function dybtn_click() {
+        window.location.href = "/Vshop/ClerkAuthentication.aspx";
+        //location.href =
+    }
+
+    //认证方法
+    function rzbtn_click() {
+        //alert($("#RStoreIdentification_FgsName").val());
+        // alert($("#RStoreIdentification_MdName").val() + $("#RStoreIdentification_JiNum").val());
+        if ($("#RStoreIdentification_FgsName").val().trim() == "" || $("#RStoreIdentification_FgsName").val().trim() == "0")
+        {
+            alert_h('请选择分公司');
+            return;
+        }
+        if($("#RStoreIdentification_MdName").val().trim() == ""){
+            alert_h('请输入店长名称');
+            return;
+        }
+        if ($("#RStoreIdentification_JiNum").val().trim() == "")
+        {
+            alert_h("请输入ALLHERE账号");
+            return;
+        }
+        //执行认证
+        $.ajax({
+            url: "/API/RzSelectStore.ashx",
+            type: 'post', dataType: 'json', timeout: 10000,
+            data: { action: "RzStore", fgsId: $("#RStoreIdentification_FgsName").val(), MdName: $("#RStoreIdentification_MdName").val(), JlNum: $("#RStoreIdentification_JiNum").val() },
+            success: function (resultData) {
+                if (resultData.Status == "OK") {
+                    alert_h("认证成功，允许开店。", function () { location.href = '/Vshop/DistributorValid.aspx?storeId=' + resultData.KeyId });
+                }
+                if (resultData.Status == "Error") {
+                    alert_h("认证失败，认证信息错误！");
+                }
+                if (resultData.Status == "KeyError") {
+                    alert_h("认证失败，ALLHERE系统未同步该门店！");
+                }
+                if (resultData.Status == "AuditingError") {
+                    alert_h("认证失败，该门店还未审核！");
+                }
+                if (resultData.Status == "YRZ")
+                {
+                    alert_h("此门店已经认证！");
+                }
+                if (resultData.Status == "ManagerError") {
+                    alert_h("此ALLHERE账号已经在管理端中存在，无法认证！");
+                }
+            }
+        });
+    }
+
+    String.prototype.trim=function() {
+
+        return this.replace(/(^\s*)|(\s*$)/g,'');
+    }
+
+</script>
+
+    <div class="pbox"><asp:literal runat="server" id="litButton"></asp:literal></div>
+<hi:common_footer runat="server" />

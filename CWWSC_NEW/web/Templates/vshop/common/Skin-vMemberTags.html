@@ -1,0 +1,121 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {
+        background: #ffffff;
+    }
+    .docBox {width: 100%;background: #ffffff;padding: 2rem 0 1rem;overflow: scroll;}
+    .docBox li{text-align: center;margin-bottom:1rem;}
+    .docBox li span{display: block;text-align: left; text-indent: 2em;font-size: 1.4rem;margin-bottom:0.5rem;}
+    em {color:red;}
+    input {border-radius:3px;outline:none;border: 1px solid #c3c3c3;text-indent: 0.5em;line-height:2rem;}
+    .messSave {text-align:center;text-indent:0;padding: 0.6rem 1.4rem;border-radius: 4px;background:#3293FE;color:#ffffff;display:inline-block;margin-left:0.6rem;}
+    .delMessSave{text-align:center;text-indent:0;padding: 0.6rem 1.4rem;border-radius: 4px;background:#b3b3b3;color:#ffffff;display:inline-block;}
+    #selectDsType {width: 12rem;height: 2.4rem;border: 1px solid #c3c3c3;}
+    .brand{overflow:hidden;padding: 10px 10px 0 10px;border-bottom: 1px solid #eaeaea;width:100%;}
+    .brand li{background: #f0f4f7;width: 30%; line-height:3rem;margin-bottom: 0.5rem;text-align: center;border-radius: 3px;float: left;position: relative;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+    .brand li .tag{display:none;position: absolute;width: 2rem;height: 0.8rem;background: #fe6807;top: -2px;right: -0.7rem;color: #fff;line-height: 0.7rem;transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+    .brand li:nth-child(3n+2){margin:0 5% 0.5rem 5%;} 
+    .selected{background: #e6f2ff!important;}
+</style>
+<ul class="docBox">
+    <li>
+        <div id="tagConts">
+            <dt>微会员标签：</dt>
+            <ul class="brand" id="brand" >
+                <hi:MemberTagsLiteral ID="memberLiteral" runat="server" ></hi:MemberTagsLiteral>
+            </ul>
+            
+        </div>
+        <div id="JinLi">
+           <dt >金立会员标签：</dt>
+            <ul class="brand" id="brandJin" >
+                <hi:JINLIMemberTagsLiteral ID="JINLIMemberTagsLiteral" runat="server"></hi:JINLIMemberTagsLiteral>
+            </ul>
+        </div>
+
+    </li>
+    <li style="position: fixed;bottom: 49px;left:0;padding: 0.8rem 0;background:rgba(0,0,0,0.6);text-align: center;width: 100%;margin-bottom: 0;">
+        <a class="delMessSave" onclick="delSave()">取消</a>
+        <a class="messSave" onclick="save()">保存</a>
+    </li>
+</ul>
+<input  type="hidden" id="hidJinLi" runat="server" ClientIDMode="Static"/>
+<script type="text/javascript">
+    var ulHeight = window.screen.height - 100 + "px";
+    $(".docBox").css({ "height": ulHeight });
+    $(function () {
+        if ($("#hidJinLi").val()== "false")
+        {
+            $("#JinLi").hide();
+        }
+        $("#brand li").click(function () {
+            $(this).find("span").toggle();
+            if ($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+            } else {
+                $(this).addClass("selected");
+            }
+        });
+        $("#brandJin li").click(function () {
+            $(this).find("span").toggle();
+            if ($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+            } else {
+                $(this).addClass("selected");
+            }
+        });
+    });
+    function save() {
+        $(".iframeBox").css({ "display": "none" });
+        //获取已选中项
+        var selectIds = "";
+        var selectIdsJinLi = "";
+        $("#brand li").each(function () {
+            if ($(this).hasClass("selected")) {
+                selectIds +=$(this).attr("id") + ",";
+            }
+        });
+        $("#brandJin li").each(function () {
+           
+            if ($(this).hasClass("selected")) {
+                selectIdsJinLi +=$(this).attr("id") + ",";
+            }
+        });
+        if (selectIds == "" &&selectIdsJinLi=="") {
+            alert_h("请选择用户标签");
+            return;
+        }
+      
+            var userId = GetQueryString("userId");
+            $.ajax({
+                url: "/api/StoreHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { action: "memberTags", userId: userId, selectIds: selectIds, JinLiIds: selectIdsJinLi },
+                dataType: "json",
+                success: function (data) {
+                    if (data.success) {
+                        alert_h(data.msg, function () {
+                            location.href = "MyUsers.aspx";
+                        });
+                        return;
+                    }
+                    else {
+                        alert_h(data.msg);
+                        return;
+                    }
+                }
+            });
+    }
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    function delSave() {
+        location.href = "MyUsers.aspx";
+    }
+
+</script>
+<hi:common_footer runat="server" />

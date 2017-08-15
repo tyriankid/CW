@@ -1,0 +1,2 @@
+﻿{"roomid":"5881‎8080","userid":8080,"reciverid":5881,"sendtime":"2017-08-03 17:49:36","content":"阿斯达所大所多","isread":"0"},
+{"roomid":"5881‎8080","userid":8080,"reciverid":5881,"sendtime":"2017-08-03 17:49:38","content":"\n阿斯达所多","isread":"0"},

@@ -1,0 +1,63 @@
+﻿<hi:common_header runat="server" />
+<div class="pbox">
+    <div class="panel panel-default">
+        <input type="hidden" runat="server" clientidmode="Static" id="litOrderId" />
+        <div class="panel-heading" id="suppliertop">
+            <h3 class="panel-title">
+                服务订单核销</h3>
+        </div>
+        <div class="panel-body offline-help" id="supplierinfo">
+            <div>
+                订单编号：<asp:literal runat="server" id="Literal1" /></div><br />
+            <div>
+                客户姓名：<asp:literal runat="server" id="Literal2" /></div><br />
+            <div>
+                客户电话：<asp:literal runat="server" id="Literal3" /></div><br />
+            <div>
+                核销码：<input type="text" clientidmode="Static" id="checkCode" /></div><br />
+         </div>
+    </div>
+    <a href="javascript:SubmitCheckCode()" class="link link link-color">核销订单</a>
+</div>
+<script type="text/javascript">
+    function SubmitCheckCode() {
+        var orderid = $("#litOrderId").val();
+        if (orderid == null || orderid == "") {
+            alert_h("页面参数错误，无法核销订单。");
+            return;
+        }
+        if ($("#checkCode").val() == "") {
+            alert_h("请输入订单核销码，需要客户提供。");
+            return;
+        }
+        myConfirm('询问', '确认要核销编号为【' + orderid + '】的订单吗？', '确定核销', function () {
+            //分配服务店员
+            var data = {};
+            data.OrderId = orderid;
+            data.ServiceCode = $("#checkCode").val();
+            $.post("/api/StoreHandler.ashx?action=serviceOrderCheck", data, function (json) {
+                if (json.Result == "OK") {
+                    alert_h(json.Msg, function () {
+                        this.window.location.href = "/Vshop/MemberOrdersService.aspx?status=0";
+                    });
+                }
+                else {
+                    alert_h(json.Msg)
+                }
+            });
+        });
+    }
+
+
+    //隐藏右上角菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+
+    //隐藏底部菜单
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+
+<hi:common_footer runat="server" />

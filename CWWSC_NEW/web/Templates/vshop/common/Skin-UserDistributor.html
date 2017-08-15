@@ -1,0 +1,289 @@
+﻿<hi:common_header runat="server" />
+<style>
+    body {background: #ffffff;}
+    .btn-danger {padding: 0.8rem 0;}
+    #setaddress {background:#3293FE}
+    table {border: 1px solid #c3c3c3;}
+    table tr {border: 1px solid #c3c3c3;}
+     table td:nth-of-type(1){width:22%;}
+     table td:nth-of-type(2){width:78%;}
+    table td {border: 1px solid #c3c3c3;padding: 1rem 0;text-align:center;}
+    #canceladdress {background: rgb(197,197,197);margin-top: 0;border-radius: 0;}
+    #keyword {width: 76%;margin-left:4%;height: 2.6rem;outline:none;border:1px solid #c3c3c3;text-indent:0.4em;margin-right:1%;}
+    #btnSheach{width: 16%;height: 2.6rem;background:#f90;border:1px solid #f90;outline:none;color:#ffffff;}
+    .storelist {width:93%;margin-left:4%;margin-top:2rem;}
+    .storelist li{width:100%;border:1px solid #c3c3c3;border-bottom:none;margin-bottom:2rem;}
+    .storelist div{line-height:2rem;border-bottom:1px solid #c3c3c3;}
+    .storelist div p{display:inline-block;border-right:1px solid #c3c3c3; width: 30%;text-align:center;}
+    .storelist div span{display:inline-block;text-align:center;width:70%;}
+    #divDisLoading {width:92%;margin:0 auto;text-indent:0.4em;}
+    .topSerchBtn {position:fixed;top:0;left:0;width: 100%;background:#ffffff;z-index:999;}
+    .lastBtn{padding:0.4rem;text-align: right;}
+    .btnSheaChoose {background: #3293FE!important;border: none!important;outline:none;}
+    .btnSheachLook{margin: 0 0.4rem 0 0.8rem;background:#449d44!important;border: none!important;outline:none;}
+</style>
+<div id="showAddress">
+    <div class="pbox distributor well">
+        <table style="width:100%">
+            <tr>
+                <td>所属分公司</td>
+                <td id="tdFgsName"><asp:Literal ID="litFgsName" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>门店名称</td>
+                <td id="tdStoreName"><asp:Literal ID="litStoreName" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>店长姓名</td>
+                <td id="tdStoreDzName"><asp:Literal ID="litStoreDzName" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>门店星级</td>
+                <td id="tdStoreStar"><asp:Literal ID="litStoreStar" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>所在城市</td>
+                <td id="tdLocation_cityname"><asp:Literal ID="litLocation_cityname" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>门店位置</td>
+                <td id="tdLocation_poiname"><asp:Literal ID="litLocation_poiname" runat="server" text=""></asp:Literal></td>
+            </tr>
+            <tr>
+                <td>详细地址</td>
+                <td id="tdLocation_poiaddress"><asp:Literal ID="litLocation_poiaddress" runat="server" text=""></asp:Literal></td>
+            </tr>
+        </table>
+        <input type="hidden" name="hidValueId" id="hidValueId" value="" runat="server" />
+        <%<hi:weixinset id="weixin" runat="server"></hi:weixinset>%>
+    </div>
+    <div class="nextstep pbox">
+        <a type="button" class="btn btn-danger btn-block" id="setaddress" onclick="nearStores()">附近门店</a>
+        <a type="button" class="btn btn-danger btn-block" id="saveaddress" onclick="bindStores()">绑定门店</a>
+    </div>
+</div>
+
+<div id="chooseAddress" class="divchoose" style="display:none">
+    <!--<a type="button" class="btn btn-danger btn-block" id="chooseaddress" onclick="OkStore()">确认位置</a>-->
+        <div class="topSerchBtn">
+            <a type="button" class="btn btn-danger btn-block" id="canceladdress" onclick="CancelStore()">取消选择</a>
+            <input type="text" id="keyword" /><input type="button" id="btnSheach" value="查询" onclick="SheachStoreList()" />
+        </div>
+    <!--门店列表-->
+    <div class="DisList" style="clear: both; overflow: hidden;margin-top:6rem;">
+        <ul class="storelist"></ul>
+        <div id="divDisLoading" class="loading"><b></b>正在加载附近门店，请打开GPS。</div>
+    </div>
+    <input id="pagenum" value="" type="hidden" />
+</div>
+
+
+<script>
+
+    //查询
+    function SheachStoreList() {
+        //根据条件获取数据
+        longitude = 0;
+        latitude = 0;
+        RequestListData(true);
+    }
+    //页面加载
+    $(function () {
+        //RequestListData(true);
+    });
+
+    //选中返回
+    function ChooseOk(storeid) {
+        $("#showAddress").show(500);
+        $("#chooseAddress").hide(500);
+
+        $("li[storeid=" + storeid + "]").each(function () {
+            $("#tdFgsName").html($(this).attr('fgsName'));
+            $("#tdStoreName").html($(this).attr('StoreName'));
+            $("#tdStoreDzName").html($(this).attr('storeRelationPerson'));
+            //$("#tdStoreStar").html();
+            $("#tdLocation_cityname").html($(this).attr('Location_cityname'));
+            $("#tdLocation_poiname").html($(this).attr('Location_poiname'));
+            $("#tdLocation_poiaddress").html($(this).attr('Location_poiaddress'));
+            $("#VUserDistributor_hidValueId").val($(this).attr('storeid'));
+        });
+
+        //$("#tdFgsName").html(datarow.fgsName);
+        //$("#tdStoreName").html(datarow.StoreName);
+        //$("#tdStoreDzName").html(datarow.storeRelationPerson);
+        ////$("#tdStoreStar").html();
+        //$("#tdLocation_cityname").html(datarow.Location_cityname);
+        //$("#tdLocation_poiname").html(datarow.Location_poiname);
+        //$("#tdLocation_poiaddress").html(datarow.Location_poiaddress);
+        //$("#hidValueId").val(datarow.UserId);
+    }
+
+    var longitude; //经度
+    var latitude; //纬度
+
+    //选择位置
+    function nearStores() {
+        $("#showAddress").hide(500);
+        $("#chooseAddress").show(500);
+
+        //longitude = 114.215034;
+        //latitude = 30.592726;
+
+        //获取用户地理位置
+        wx.getLocation({
+            type: 'wgs84',// 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            success: function (res) {
+                latitude = res.latitude; //纬度
+                longitude = res.longitude; //经度
+                
+                //alert_h("已获取当前位置，点击加载列表！", function () {
+                    RequestListData(true);
+                //});
+            },
+            cancel: function (res) {
+                alert_h("您拒绝获取位置系统将无法判断附近门店！", function () {
+                    RequestListData(true);;
+                });
+            },
+            fail: function (res) {
+                //alert_h(JSON.stringify(res), function () {
+                alert_h("获取当前位置失败，点击加载列表", function () {
+                    RequestListData(true);
+                });
+                
+            }
+        });//end wx.getLocation
+        
+    }
+
+    var nextPage = 1;//当前加载的页码
+    //得到门店数据，供前端显示
+    function RequestListData(isrefreshlist) {
+        //重新加载验证
+        if (isrefreshlist) {
+            $("#pagenum").val(0);
+            nextPage = 1;
+            $(".DisList ul").html("");
+        }
+        //防止重复加载验证
+        if (parseInt($("#pagenum").val()) >= nextPage) { return; }
+        //构建传输数据
+        var data = {};
+        data.lng = longitude;
+        data.lat = latitude;
+        data.keyword = $("#keyword").val();
+        data.pagenum = nextPage;
+        data.pagesize = 10;
+        //Post 传入经纬度，返回门店列表信息
+        $.post("/api/VshopProcess.ashx?action=StoreData", data, function (json) {
+            if (json.Result == "OK") {
+                //得到数据集， 无刷新加载绑定数据
+                if (json.Count <= 0) {
+                    $("#divDisLoading").text("暂无数据");
+                    return;
+                }
+                $("#pagenum").val(nextPage);//当前页
+                nextPage = json.NextPage;
+                for (var i = 0; i < json.Data.length; i++) {
+                    var li = '<li class="swiper-slide" style="width:100%;" storeid="' + json.Data[i].UserId + '"  fgsName="'
+                        + json.Data[i].fgsName + '" StoreName="' + json.Data[i].StoreName + '" storeRelationPerson="'
+                        + json.Data[i].storeRelationPerson + '" Location_cityname="' + json.Data[i].Location_cityname + '"  Location_poiname="'
+                        + json.Data[i].Location_poiname + '"  Location_poiaddress="' + json.Data[i].Location_poiaddress + '">' +
+                                        '<div><p>所属分公司</p><span>' + json.Data[i].fgsName + '</span></div>' +
+                                        '<div><p>门店名称</p><span>' + json.Data[i].StoreName + '</span></div>' +
+                                        '<div><p>店长</p><span>' + json.Data[i].storeRelationPerson + '</span></div>' +
+                                        '<div><p>城市</p><span>' + json.Data[i].Location_cityname + '</span></div>' +
+                                        '<div><p>位置名称</p><span>' + json.Data[i].Location_poiname + '</span></div>' +
+                                        '<div><p>位置详细</p><span>' + json.Data[i].Location_poiaddress + '</span></div>' +
+                                        '<div class="lastBtn"><input type="button" class="btnSheaChoose" id="btnSheach" value="选择" onclick="ChooseOk(' + json.Data[i].UserId + ')" /><input type="button" class="btnSheachLook" id="btnSheach" value="查看" onclick="ShowLocation(' + json.Data[i].Location_lng + ',' + json.Data[i].Location_lat + ',' + json.Data[i].UserId + ')" /></div>' +
+                                    '</li>';
+                    $(".storelist").append(li);
+                    if (nextPage == 0) {
+                        $("#divDisLoading").text("加载完成");
+                    }
+                }
+            }
+            else {
+                alert_h(json.Msg);
+            }
+        });
+    }
+
+    //自动加载
+    $(window).scroll(function () {
+        //alert("当前页码："+ nextPage);
+        if ($(window).scrollTop() == $(document).height() - $(window).height() && nextPage > 1) {
+            RequestListData(false);
+        }
+    });
+
+    //显示
+    function ShowLocation(lng, lat, storeid) {
+        if (lng != null && lat != null) {
+            var latitude = parseFloat(lat);
+            var longitude = parseFloat(lng);
+            
+            var name = '';
+            var address = '';
+            $("li[storeid=" + storeid + "]").each(function () {
+                name = $(this).attr('Location_poiname');
+                address = $(this).attr('Location_poiaddress');
+            });
+            wx.openLocation({
+                latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
+                longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
+                name: name, // 位置名
+                address: address, // 地址详情说明
+                scale: 28, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                infoUrl: '/Vshop/UserDistributor.aspx' // 在查看位置界面底部显示的超链接,可点击跳转
+            });
+        }
+        else {
+            alert_h("该门店未绑定位置！");
+        }
+    }
+
+
+    //绑定位置
+    function bindStores() {
+        var valueStoreId = $("#VUserDistributor_hidValueId").val();
+        var valueStoreName = $("#tdStoreName").html();
+        if (valueStoreId == null || valueStoreId == "") {
+            alert_h("请先选择绑定门店！");
+            return;
+        }
+        
+        //构建传输数据
+        var data = {};
+        data.storeid = valueStoreId;
+
+        //弹出选择提示框
+        myConfirm('询问', '确认要绑定门店【' + valueStoreName + '】吗？', '确定绑定', function () {
+            BindUserStore(data);
+        });
+    }
+
+    //Post提交到数据库
+    function BindUserStore(data) {
+        $.post("/api/VshopProcess.ashx?action=BindUserStore", data, function (json) {
+            if (json.Result == "OK") {
+                alert_h("绑定成功！", function () {
+                    //location.reload();
+                });
+            }
+            else {
+                alert_h(json.Msg);
+            }
+        });
+    }
+
+
+    //取消选择
+    function CancelStore() {
+        $("#showAddress").show(500);
+        $("#chooseAddress").hide(500);
+    }
+
+
+</script>
+<hi:common_footer runat="server" />

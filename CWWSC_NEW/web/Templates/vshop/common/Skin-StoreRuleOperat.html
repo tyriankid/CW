@@ -1,0 +1,116 @@
+﻿<hi:common_header runat="server" />
+<style>
+    html{height: 100%;width: 100%;}
+    body {background: rgba(0,0,0,0.6);height: 100%;width: 100%;}
+    .docBox {position:absolute;top: 15%;left:0;right:0;margin: 0 auto;height:32rem;width: 90%;background: #ffffff;padding: 3rem 10px 1rem;border-radius: 6px;}
+    .docBox li{text-align: center;margin-bottom:2rem;}
+    .docBox li span{display: block;text-align: left; text-indent: 2em;font-size: 1.4rem;margin-bottom:0.5rem;}
+    em {color:red;}
+    input {border-radius:3px;outline:none;border: 1px solid #c3c3c3;text-indent: 0.5em;line-height:4rem;width:100%;height:4rem;}
+    .messSave {text-align:center;text-indent:0;padding: 0.7rem 1.2rem;border-radius: 3px;background:#c1BBBB;color:#ffffff;display:inline-block;}
+    .delMessSave{text-align:center;text-indent:0;padding: 0.7rem 1.2rem;border-radius: 3px;background:#c1BBBB;color:#ffffff;display:inline-block;margin-right:0.8rem;}
+    #selectDsType {width: 12rem;height:4rem;border: 1px solid #c3c3c3;width:100%;}
+</style>
+<ul class="docBox">
+    <li><!--<span class="formitemtitle Pw_110"><em>*</em>店员姓名：</span>-->
+        <input type="text" id="txtName" runat="server" placeholder="请填写店员姓名" clientidmode="Static" />
+    </li>
+    <li><!--<span class="formitemtitle Pw_110"><em>*</em>店员电话：</span>-->
+        <input type="text" id="txtPhone" runat="server" placeholder="请填写店员电话" clientidmode="Static" />
+
+    </li>
+    <li >
+        <select id="selectDsType" runat="server" clientidmode="Static" >
+            <option value="">请选择店员类型</option>
+            <option value="0">导购店员</option>
+            <option value="1">服务店员</option>
+        </select>
+    </li>
+    <li style="margin-top:1rem;">
+        <!--<span class="formitemtitle Pw_110"><em>*</em>排　　序：</span>-->
+        <input type="text" id="txtSort" runat="server" placeholder="请填写排序" clientidmode="Static" />
+    </li>
+    <li>  
+        <a class="delMessSave" onclick="delSave()">取消</a><a class="messSave" onclick="save()">保存</a>
+    </li>
+</ul>
+<script type="text/javascript">
+    $(".messSave").attr("onclick", "return false");
+    $("#txtName").focus(function () {
+        $(".messSave").attr("onclick", "save()").css({ "background": "#3293FE" });
+    });
+    $("#txtPhone").focus(function () {
+        $(".messSave").attr("onclick", "save()").css({ "background": "#3293FE" });
+    });
+    $("#selectDsType").click(function () {
+        $(".messSave").attr("onclick", "save()").css({ "background": "#3293FE" });
+    });
+    $("#txtSort").focus(function () {
+        $(".messSave").attr("onclick", "save()").css({ "background": "#3293FE" });
+    });
+    function save() {
+        $(".iframeBox").css({"display":"none"});
+        if ($("#txtName").val() == "")
+        {
+            alert_h("店员姓名不能为空");
+            return; 
+        }
+        if ($("#selectDsType").val() == "")
+        {
+            alert_h("请选择店员类型");
+            return;
+        }
+        var DsID = GetQueryString("DsId");
+        if (DsID == "" || DsID == null) {
+            $.ajax({
+                url: "/api/StoreHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { action: "StoreRule", name: $("#txtName").val(), type: $("#selectDsType").val(), phone: $("#txtPhone").val(), sort: $("#txtSort").val(), StoreRuleType: "add" },
+                dataType: "json",
+                success: function (data) {
+                    if (data.success) {
+                        alert_h(data.msg, function () {
+                            location.href = "StoreRuleList.aspx";
+                        });
+                        return;
+                    }
+                    else {
+                        alert_h(data.msg);
+                        return;
+                    }
+                }
+            });
+        }
+        else {
+            $.ajax({
+                url: "/api/StoreHandler.ashx",
+                type: 'post', dataType: 'json', timeout: 10000,
+                data: { action: "StoreRule", DsID: DsID, name: $("#txtName").val(), type: $("#selectDsType").val(), phone: $("#txtPhone").val(), sort: $("#txtSort").val(), StoreRuleType: "edit" },
+                dataType: "json",
+                success: function (data) {
+                    if (data.success) {
+                        alert_h(data.msg, function () {
+                            location.href = "StoreRuleList.aspx";
+                        });
+                        return;
+                    }
+                    else {
+                        alert_h(data.msg);
+                        return;
+                    }
+                }
+
+            });
+        }
+    }
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    function delSave() {
+        $(window.parent.document).find(".iframeBox").hide().find("iframe").attr("src", "");
+    }
+   
+</script>
+
